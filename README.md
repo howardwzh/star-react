@@ -64,7 +64,6 @@ function UserBox(user) {
 ## 状态（State）
 UI 不单单是对服务器端或业务逻辑状态的复制。实际上还有很多状态是针对具体的渲染目标。举个例子，在一个 text field 中打字。它不一定要复制到其他页面或者你的手机设备。滚动位置这个状态是一个典型的你几乎不会复制到多个渲染目标的。
 
-
 我们倾向于使用不可变的数据模型。我们把可以改变 state 的函数串联起来作为原点放置在顶层。
 ```
 function FancyNameBox(user, likes, onClick) {
@@ -152,9 +151,7 @@ UserList(data.users, likesPerUser, updateUserLikes);
 
 不幸的是，自从 UI 中有太多的列表，明确的管理就需要大量的重复性样板代码。
 
-
 我们可以通过推迟一些函数的执行，进而把一些模板移出业务逻辑。比如，使用“柯里化”（JavaScript 中的 bind）。然后我们可以从核心的函数外面传递 state，这样就没有样板代码了。
-
 
 下面这样并没有减少样板代码，但至少把它从关键业务逻辑中剥离。
 
@@ -177,7 +174,8 @@ const resolvedBox = {
 
 之前我们知道可以使用组合避免重复执行相同的东西这样一种重复模式。我们可以把执行和传递 state 逻辑挪动到被复用很多的低层级的函数中去。
 
-```function FancyBoxWithState(
+```
+function FancyBoxWithState(
   children,
   stateMap,
   updateState
