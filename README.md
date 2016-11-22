@@ -1,3 +1,6 @@
+- [一看就懂的ReactJs入门教程-精华版](http://www.cnblogs.com/yunfeifei/p/4486125.html)
+
+
 # React 设计思想（摘录）
 
 ## 变换（Transformation）
