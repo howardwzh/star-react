@@ -1,6 +1,11 @@
+## 资料
 - [一看就懂的ReactJs入门教程-精华版](http://www.cnblogs.com/yunfeifei/p/4486125.html)
+- [【译】展望2016，React.js 最佳实践 (中英对照版)](https://blog.jimmylv.info/2016-01-22-React.js-Best-Practices-for-2016/)
+- [【译】Redux + React 应用程序架构的 3 条规范（内附实例）](https://blog.jimmylv.info/2016-07-04-rules-for-structuring-redux-applications/)
+- [從零開始學 ReactJS](https://github.com/kdchang/reactjs101)
 
 
+## 笔记
 # React 设计思想（摘录）
 
 ## 变换（Transformation）
