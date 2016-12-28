@@ -22,7 +22,7 @@
 > 的桥梁。这样的分法可以让程式架构和职责更清楚，所以接下来我们就使用上一章节的 
 > Redux TodoApp 进行改造，改造成 Container 与 Presentational Components 模式。
 
-### Container Components - TodoHeaderContainer.js
+#### Container Components - TodoHeaderContainer.js
 ```javascript
 import { connect } from 'react-redux';
 import TodoHeader from '../../components/TodoHeader';
@@ -56,7 +56,7 @@ export default connect(
 )(TodoHeader);
 ```
 
-### Presentational Components - TodoHeader.js
+#### Presentational Components - TodoHeader.js
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
