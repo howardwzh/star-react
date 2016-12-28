@@ -61,7 +61,8 @@ export default connect(
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// 开始建设 Component 并使用 connect 进来的 props 并绑定事件（onChange、onClick）。注意我们的 state 因为是使用 `ImmutableJS` 所以要用 `get()` 取值
+// 开始建设 Component 并使用 connect 进来的 props 并绑定事件（onChange、onClick）。
+// 注意我们的 state 因为是使用 `ImmutableJS` 所以要用 `get()` 取值
 
 const TodoHeader = ({
   onChangeText,
