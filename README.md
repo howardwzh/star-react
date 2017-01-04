@@ -1,3 +1,4 @@
+![](./banner-react.png)
 ## 资料
 - [一看就懂的ReactJs入门教程-精华版](http://www.cnblogs.com/yunfeifei/p/4486125.html)
 - [【译】展望2016，React.js 最佳实践 (中英对照版)](https://blog.jimmylv.info/2016-01-22-React.js-Best-Practices-for-2016/)
@@ -5,6 +6,7 @@
 - [從零開始學 ReactJS](https://github.com/carlleton/reactjs101/tree/zh-CN)
 - [React学习资源汇总](https://github.com/tsrot/study-notes/blob/master/React%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB.md)
 - [react-boilerplate](https://github.com/mxstbr/react-boilerplate/tree/master/docs)
+- [React 测试入门教程](http://www.ruanyifeng.com/blog/2016/02/react-testing-tutorial.html)
 
 ## [gist](./gist.md)
 
