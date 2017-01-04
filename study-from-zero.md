@@ -63,6 +63,24 @@ React Native和过去的 Apache Cordova 等基于 WebView 的解决方案比较�
 
 GraphQL 是 Facebook 所开发的资料查询语言（Data Query Language），主要是想解决传统 RESTful API 所遇到的一些问题，并提供前端更有弹性的 API 设计方式。Relay 则是 Facebook 提出搭配 GraphQL 用于 React 的一个宣告式数据框架，可以降低 Ajax 的请求数量（类似的框架还有 Netflix 推出的 Falcor）。但由于目前主流的后端 API 仍以传统 RESTful API 设计为主，所以在使用 GraphQL 上通常会需要比较大架构设计的变动。因此本书则是把 GraphQL/Relay 介绍放到附录的部份，让有兴趣的读者可以自行参考体验一下。
 
+## 组件生命周期
+
+### 组件的生命周期分成三个状态
+- Mounting：已插入真实 DOM
+- Updating：正在被重新渲染
+- Unmounting：已移出真实 DOM
+
+### React 为每个状态都提供了两种处理函数，will 函数在进入状态之前调用，did 函数在进入状态之后调用
+- componentWillMount()
+- componentDidMount()
+- componentWillUpdate(object nextProps, object nextState)
+- componentDidUpdate(object prevProps, object prevState)
+- componentWillUnmount()
+
+### 此外，React 还提供两种特殊状态的处理函数。
+- componentWillReceiveProps(object nextProps)：已加载组件收到新的参数时调用
+- shouldComponentUpdate(object nextProps, object nextState)：组件判断是否重新渲染时调用
+
 ## Container 与 Presentational Components
 
 > 以下先参考 Redux 官网 列出两者相异之处：

@@ -3,6 +3,8 @@
 - [【译】展望2016，React.js 最佳实践 (中英对照版)](https://blog.jimmylv.info/2016-01-22-React.js-Best-Practices-for-2016/)
 - [【译】Redux + React 应用程序架构的 3 条规范（内附实例）](https://blog.jimmylv.info/2016-07-04-rules-for-structuring-redux-applications/)
 - [從零開始學 ReactJS](https://github.com/carlleton/reactjs101/tree/zh-CN)
+- [React学习资源汇总](https://github.com/tsrot/study-notes/blob/master/React%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB.md)
+- [react-boilerplate](https://github.com/mxstbr/react-boilerplate/tree/master/docs)
 
 ## [gist](./gist.md)
 
