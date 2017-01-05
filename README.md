@@ -160,13 +160,13 @@ GraphQL 是 Facebook 所开发的资料查询语言（Data Query Language），�
 </div>
 ```
 
-```java
+```javascript
 //  注意组件开头第一个字母都要大写
 class MyComponent extends React.Component {
     // render 是 Class based 组件唯一必须的方法（method）
     render() {
         return (
-            <div>Hello, World!</div>
+            <div>Hello, World! </div>
         );
     }
 }
@@ -177,7 +177,7 @@ ReactDOM.render(<MyComponent/>, document.getElementById('app'));
 
 2. 用 JSX 进行宣告式（Declarative）UI 设计
 
-```html
+```javascript
 // 使用宣告式（Declarative）UI 设计很容易可以看出这个组件的功能
 <MailForm />
 
