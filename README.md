@@ -97,30 +97,30 @@ GraphQL 是 Facebook 所开发的资料查询语言（Data Query Language），�
 3. 在 <body> 撰写 React Component 要插入（mount）指定节点的地方：<div id="example"></div>
 4. 透过 babel 进行语言翻译 React JSX 语法，babel 会将其转为浏览器看的懂得 JavaScript。其代表意义是：ReactDOM.render(欲 render 的 Component 或 HTML 元素, 欲插入的位置)。所以我们可以在浏览器上打开我们的 hello.html，就可以看到 Hello, world! 。That's it，我们第一个 React 应用程式就算完成了！
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="UTF-8" />
-        <title>Hello React!</title>
-        <!-- 以下引入 react.js, react-dom.js（react 0.14 后将 react-dom 从 react 核心分离，更符合 react 跨平台抽象化的定位）以及 babel-core browser 版 -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react-dom.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.1/babel.min.js"></script>
-      </head>
-      <body>
-        <!-- 这边的 id="example" 的 <div> 为 React Component 要插入的地方 -->
-        <div id="example"></div>
-        <!-- 以下就是包在 babel（透过进行语言翻译）中的 React JSX 语法，babel 会将其转为浏览器看的懂得 JavaScript -->
-        <script type="text/babel">
-          ReactDOM.render(
-            <h1>Hello, world!</h1>,
-            document.getElementById('example')
-          );
-        </script>
-      </body>
-    </html>
-    ```
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <!-- 以下引入 react.js, react-dom.js（react 0.14 后将 react-dom 从 react 核心分离，更符合 react 跨平台抽象化的定位）以及 babel-core browser 版 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.18.1/babel.min.js"></script>
+  </head>
+  <body>
+    <!-- 这边的 id="example" 的 <div> 为 React Component 要插入的地方 -->
+    <div id="example"></div>
+    <!-- 以下就是包在 babel（透过进行语言翻译）中的 React JSX 语法，babel 会将其转为浏览器看的懂得 JavaScript -->
+    <script type="text/babel">
+      ReactDOM.render(
+        <h1>Hello, world!</h1>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
+```
 
 #### Webpack
 
@@ -141,53 +141,53 @@ GraphQL 是 Facebook 所开发的资料查询语言（Data Query Language），�
 
 **<TodoApp> 组件可以包含 <TodoHeader />、<TodoList /> 子组件**
 
-    ```html
-    <div>
-        <TodoHeader />
-        <TodoList />
-    </div>
-    ```
+```html
+<div>
+    <TodoHeader />
+    <TodoList />
+</div>
+```
 
 **<TodoList /> 组件内部长相：**
 
-    ```html
-    <div>
-        <ul>
-            <li>写程式码</li>
-            <li>哄妹子</li>
-            <li>买书</li>
-        </ul>
-    </div>
-    ```
+```html
+<div>
+    <ul>
+        <li>写程式码</li>
+        <li>哄妹子</li>
+        <li>买书</li>
+    </ul>
+</div>
+```
 
-    ```javascript
-    //  注意组件开头第一个字母都要大写
-    class MyComponent extends React.Component {
-        // render 是 Class based 组件唯一必须的方法（method）
-        render() {
-            return (
-                <div>Hello, World!</div>
-            );
-        }
+```java
+//  注意组件开头第一个字母都要大写
+class MyComponent extends React.Component {
+    // render 是 Class based 组件唯一必须的方法（method）
+    render() {
+        return (
+            <div>Hello, World!</div>
+        );
     }
+}
 
-    // 将 <MyComponent /> 组件插入 id 为 app 的 DOM 元素中
-    ReactDOM.render(<MyComponent/>, document.getElementById('app'));
-    ```
+// 将 <MyComponent /> 组件插入 id 为 app 的 DOM 元素中
+ReactDOM.render(<MyComponent/>, document.getElementById('app'));
+```
 
 2. 用 JSX 进行宣告式（Declarative）UI 设计
 
-    ```html
-    // 使用宣告式（Declarative）UI 设计很容易可以看出这个组件的功能
-    <MailForm />
+```html
+// 使用宣告式（Declarative）UI 设计很容易可以看出这个组件的功能
+<MailForm />
 
 
-    // <MailForm /> 内部长相
-    <form>
-        <input type="text" name="email" />
-        <button type="submit"></button>
-    </form>
-    ```
+// <MailForm /> 内部长相
+<form>
+    <input type="text" name="email" />
+    <button type="submit"></button>
+</form>
+```
 
 3. 使用 Virtual DOM
 4. Component PropType 防呆机制
