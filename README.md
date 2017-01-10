@@ -1,4 +1,4 @@
-![](./banner-react.png)
+![](./images/banner-react.png)
 > 前言：
 > - 主要参考[《從零開始學 ReactJS》](https://github.com/carlleton/reactjs101/tree/zh-CN)的顺序边学边练习的方式推进
 > - 其中demos参考自 *阮一峰* 的[《全栈工程师培训材料-demos》](https://github.com/ruanyf/jstraining/tree/master/demos)中的react部分
@@ -160,7 +160,7 @@ GraphQL 是 Facebook 所开发的资料查询语言（Data Query Language），�
 </div>
 ```
 
-```javascript
+```
 //  注意组件开头第一个字母都要大写
 class MyComponent extends React.Component {
     // render 是 Class based 组件唯一必须的方法（method）
@@ -175,7 +175,7 @@ class MyComponent extends React.Component {
 ReactDOM.render(<MyComponent/>, document.getElementById('app'));
 ```
 
-2. 用 JSX 进行宣告式（Declarative）UI 设计
+2. 用 [JSX](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch03/react-jsx-introduction.md) 进行宣告式（Declarative）UI 设计
 
 ```javascript
 // 使用宣告式（Declarative）UI 设计很容易可以看出这个组件的功能
@@ -190,14 +190,60 @@ ReactDOM.render(<MyComponent/>, document.getElementById('app'));
 ```
 
 3. 使用 Virtual DOM
+
+在传统 Web 中一般是使用 jQuery 进行 DOM 的直接操作。然而更改 DOM 往往是 Web 效能的瓶颈，因此在 React 世界设计有 Virtual DOM 的机制，让 App 和 DOM 之间用 Virtual DOM 进行沟通。当更改 DOM 时，会透过 React 自身的 diff 演算法去计算出最小更新，进而去最小化更新真实的 DOM。
+
 4. Component PropType 防呆机制
+
+在 React 设计时除了提供 props 预设值设定（Default Prop Values）外，也提供了 Prop 的验证（Validation）机制，让整个 Component 设计更加稳健
+
+```
+//  注意组件开头第一个字母都要大写
+class MyComponent extends React.Component {
+    // render 是 Class based 组件唯一必须的方法（method）
+    render() {
+        return (
+            <div>Hello, World!</div>
+        );
+    }
+}
+
+// PropTypes 验证，若传入的 props type 不符合将会显示错误
+MyComponent.propTypes = {
+  todo: React.PropTypes.object,
+  name: React.PropTypes.string,
+}
+
+// Prop 预设值，若对应 props 没传入值将会使用 default 值
+MyComponent.defaultProps = {
+ todo: {}, 
+ name: '', 
+}
+```
+
 5. Component 就像个状态机（State Machine），而且也有生命周期（Life Cycle） 
+
+Component 就像个状态机（State Machine），根据不同的 state（透过 setState() 修改）和 props（由父元素传入），Component 会出现对应的显示结果。而人有生老病死，组件也有生命周期。透过操作生命周期处理函数，可以在对应的时间点进行 Component 需要的处理
+
 6. 一律重绘（Always Redraw）和单向资料流（Unidirectional Data Flow）
+
+在 React 世界中，props 和 state 是影响 React Component 长相的重要要素。其中 props 都是由父元素所传进来，不能更改，若要更改 props 则必须由父元素进行更改。而 state 则是根据使用者互动而产生的不同状态，主要是透过 setState() 方法进行修改。当 React 发现 props 或是 state 更新时，就会重绘整个 UI。当然你也可以使用 forceUpdate() 去强迫重绘 Component。而 React 透过整合 Flux 或 Flux-like（例如：Redux）可以更具体实现单向资料流（Unidirectional Data Flow），让资料流的管理更为清晰。
+
 7. 在 JavaScript 里写 CSS：Inline Style
 
+**在 React Component 中 CSS 使用 Inline Style 写法，全都封装在 JavaScript 当中：**
+
+```
+const divStyle = {
+  color: 'red',
+  backgroundImage: 'url(' + imgUrl + ')',
+};
+
+ReactDOM.render(<div style={divStyle}>Hello World!</div>, document.getElementById('app'));
+```
 
 
-## 组件生命周期
+## [组件生命周期](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch04/react-component-life-cycle.md#react-component-生命周期)
 
 ### 组件的生命周期分成三个状态
 - Mounting：已插入真实 DOM
@@ -295,3 +341,233 @@ const TodoHeader = ({
 
 export default TodoHeader;
 ```
+
+## [React Router 入门实战教学](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch05/react-router-introduction.md)
+
+#### 开始 React Routing 之旅
+
+以下是 webpack.config.js 的进入点 **src/index.js**，负责管理 Router 和 render 
+组件。这边我们要先详细讨论的是，为了使用 React Router 功能引入了许多 
+react-router 内部的组件。
+
+1. Router Router 是放置 Route 的容器，其本身不定义 routing ，真正 routing 规则由 Route 定义。
+2. Route Route 负责 URL 和对应的组件关系，可以有多个 Route 规则也可以有嵌套（nested）Routing。像下面的例子就是每个页面都会先载入 App 组件再载入对应 URL 的组件。
+3. history Router 中有一个属性 history 的规则，这边使用我们使用 hashHistory，使用 routing 将由 hash（#）变化决定。例如：当使用者拜访 http://www.github.com/，实际看到的会是 http://www.github.com/#/。下列范例若是拜访了 /about 则会看到 http://localhost:8008/#/about 并载入 App 组件再载入 About 组件。
+  + hashHistory 教学范例使用的，会通过 hash 进行对应。好处是简单易用，不用多余设定。
+  + browserHistory 适用于伺服器端渲染，但需要设定伺服器端避免处理错误，这部份我们会在后面的章节详细说明。注意的是若是使用 Webpack 开发用伺服器需加上 --history-api-fallback
+  `$ webpack-dev-server --inline --content-base . --history-api-fallback`
+  + createMemoryHistory 主要用于伺服器渲染，使用上会建立一个存在记忆体的 history 物件，不会修改浏览器的网址位置。
+  `const history = createMemoryHistory(location)`
+4. path path 是对应 URL 的规则。例如：/repos/torvalds 会对应到 /repos/:name 的位置，并将参数传入 Repos 组件中。由 this.props.params.name 取得参数。顺带一提，若为查询参数 /user?q=torvalds 则由 this.props.location.query.q 取得参数。
+5. IndexRoute 由于 / 情况下 App 组件对应的 this.props.children 会是 undefinded，所以使用 IndexRoute 来解决对应问题。这样当 URL 为 / 时将会对应到 Home 组件。不过要注意的是 IndexRoute 没有 path 属性。
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import App from './components/App';
+import Home from './components/Home';
+import Repos from './components/Repos';
+import About from './components/About';
+import User from './components/User';
+import Contacts from './components/Contacts';
+
+ReactDOM.render(
+  <Router history={hashHistory}>
+    <Route path="/" component={App}>
+      <IndexRoute component={Home} />
+      <Route path="/repos/:name" component={Repos} />
+      <Route path="/about" component={About} />
+      <Route path="/user" component={User} />
+      <Route path="/contacts" component={Contacts} />
+    </Route>
+  </Router>,
+  document.getElementById('app'));
+
+  /* 另外一种写法：
+    const routes = (
+        <Route path="/" component={App}>
+          <IndexRoute component={Home} />
+          <Route path="/repos/:name" component={Repos} />
+          <Route path="/about" component={About} />
+          <Route path="/user" component={User} />
+          <Route path="/contacts" component={Contacts} />
+        </Route>
+    );
+
+    ReactDOM.render(
+      <Router routes={routes} history={hashHistory} />,
+      document.getElementById('app'));
+  */
+```
+
+**以下是 src/components/App/App.js 完整程式码：**
+
+```
+import React from 'react';
+import { Link, IndexLink } from 'react-router';
+import styles from './appStyles';
+import NavLink from '../NavLink';
+
+const App = (props) => (
+  <div>
+    <h1>React Router Tutorial</h1>
+    <ul>
+      <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
+      <li><Link to="/about" activeStyle={{ color: 'green' }}>About</Link></li>
+      <li><Link to="/repos/react-router" activeStyle={styles.active}>Repos</Link></li>
+      <li><Link to="/user" activeClassName="active">User</Link></li>
+      <li><NavLink to="/contacts">Contacts</NavLink></li>
+    </ul>
+    <!-- 我们将 App 组件当做每个组件都会载入的母模版，因此可以透过 children 载入对应 URL 的子组件 -->
+    {props.children}
+  </div>
+);
+
+App.propTypes = {
+  children: React.PropTypes.object,
+};
+
+export default App;
+```
+
+**以下是 src/components/Repos/Repos.js 完整程式码：**
+
+```
+import React from 'react';
+
+const Repos = (props) => (
+  <div>
+    <h3>Repos</h3>
+    <h5>{props.params.name}</h5>
+  </div>
+);
+
+Repos.propTypes = {
+  params: React.PropTypes.object,
+};
+
+export default Repos;
+```
+
+![](./images/router-result.png)
+
+## [ImmutableJS](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch06/react-immutable-introduction.md)
+
+**当 map1 值一改，map2 的值也会受影响。**
+
+```js
+var map1 = { a: 1 }; 
+var map2 = map1; 
+map2.a = 2
+```
+
+通常一般作法是使用 deepCopy 来避免修改，但这样作法会产生较多的资源浪费。为了很好的解决这个问题，我们可以使用 Immutable Data，**所谓的 Immutable Data 就是一旦建立，就不能再被修改的数据资料。**
+
+```js
+import Immutable from 'immutable';
+
+var map1 = Immutable.Map({ a: 1, b: 3 });
+var map2 = map1.set('a', 2);
+
+map1.get('a'); // 1
+map2.get('a'); // 2
+```
+
+#### ImmutableJS 特性介绍
+
+ImmutableJS 提供了 7 种不可修改的资料类型：List、Map、Stack、OrderedMap、Set、OrderedSet、Record。若是对 Immutable 物件操作都会回传一个新值。其中比较常用的有 List、Map 和 Set：
+
+1. Map：类似于 key/value 的 object，在 ES6 也有原生 Map 对应
+```js
+const Map= Immutable.Map;
+
+// 1. Map 大小
+const map1 = Map({ a: 1 });
+map1.size
+// => 1
+
+// 2. 新增或取代 Map 元素
+// set(key: K, value: V)
+const map2 = map1.set('a', 7);
+// => Map { "a": 7 }
+
+// 3. 删除元素
+// delete(key: K)
+const map3 = map1.delete('a');
+// => Map {}
+
+// 4. 清除 Map 内容
+const map4 = map1.clear();
+// => Map {}
+
+// 5. 更新 Map 元素
+// update(updater: (value: Map<K, V>) => Map<K, V>)
+// update(key: K, updater: (value: V) => V)
+// update(key: K, notSetValue: V, updater: (value: V) => V)
+const map5 = map1.update('a', () => (7))
+// => Map { "a": 7 }
+
+// 6. 合并 Map 
+const map6 = Map({ b: 3 });
+map1.merge(map6);
+// => Map { "a": 1, "b": 3 }
+```
+
+[查看更多](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch06/react-immutable-introduction.md#immutablejs-特性介绍)
+
+#### [ImmutableJS 的特性整理](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch06/react-immutable-introduction.md#immutablejs-的特性整理)
+
+#### [React 效能优化](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch06/react-immutable-introduction.md#react-效能优化)
+
+ImmutableJS 除了可以和 Flux/Redux 整合外，也可以用于基本 react 效能优化。以下是一般使用效能优化的简单方式：
+
+传统 JavaScript 比较方式，若资料型态为 Primitive 就不会有问题：
+
+```js
+// 在 shouldComponentUpdate 比较接下来的 props 是否一致，若相同则不重新渲染，提升效能
+shouldComponentUpdate (nextProps) {
+    return this.props.value !== nextProps.value;
+}
+```
+
+但当比较的是物件的话就会出现问题：
+
+```js
+// 假设 this.props.value 为 { foo: 'app' }
+// 假设 nextProps.value 为 { foo: 'app' },
+// 虽然两者值是一样，但由于 reference 位置不同，所以视为不同。但由于值一样应该要避免重复渲染
+this.props.value !== nextProps.value; // true
+```
+
+使用 ImmutableJS：
+
+```js
+var SomeRecord = Immutable.Record({ foo: null });
+var x = new SomeRecord({ foo: 'app'  });
+var y = x.set('foo', 'azz');
+x === y; // false
+```
+
+在 ES6 中可以使用官方文件上的 PureRenderMixin 进行比较，可以让程式码更简洁：
+
+```
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+class FooComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+  }
+  render() {
+    return <div className={this.props.className}>foo</div>;
+  }
+}
+```
+
+## [Redux 基础概念](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch07/react-redux-introduction.md)
+
+## [Redux 实战入门](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch07/react-redux-real-world-example.md)
+
+以下这张图表示了整个 React Redux App 的资料流程图（使用者与 View 互动 => dispatch 出 Action => Reducers 依据 action tyoe 分配到对应处理方式，回传新的 state => 透过 React Redux 传送给 React，React 重新绘制 View）：
+
+![](./images/redux-flow.png)

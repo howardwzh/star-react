@@ -47,6 +47,13 @@
           <div>
             <p>API 数据获取成功</p>
             <p>改写代码，将结果显示在这里</p>
+            <ul>
+              {
+                this.state.data.items.map((i) => {
+                  return <li>{i.full_name}</li>
+                })
+              }
+            </ul>
           </div>
         );
       }
