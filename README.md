@@ -261,87 +261,6 @@ ReactDOM.render(<div style={divStyle}>Hello World!</div>, document.getElementByI
 - componentWillReceiveProps(object nextProps)：已加载组件收到新的参数时调用
 - shouldComponentUpdate(object nextProps, object nextState)：组件判断是否重新渲染时调用
 
-## Container 与 Presentational Components
-
-> 以下先参考 Redux 官网 列出两者相异之处：
-> 
-> Presentational Components
-> 
-> - 用途：怎么看事情（Markup、外观）
-> - 是否让 Redux 意识到：否
-> - 取得资料方式：从 props 取得
-> - 改变资料方式：从 props 去呼叫 callback function
-> - 写入方式：手动处理 
->
-> Container Components 
-> - 用途：怎么做事情（撷取资料，更新 State）
-> - 是否让 Redux 意识到：是
-> - 取得资料方式：订阅 Redux State（store）
-> - 改变资料方式：Dispatch Redux Action
-> - 写入方式：从 React Redux 产生
-> 
-> 从上面的分析读者可以发现，两者最大的差别在于 Component 主要负责单纯的 UI 
-> 的渲染，而 Container 则负责和 Redux 的 store 沟通，作为 Redux 和 Component 之
-> 的桥梁。这样的分法可以让程式架构和职责更清楚，所以接下来我们就使用上一章节的 
-> Redux TodoApp 进行改造，改造成 Container 与 Presentational Components 模式。
-
-#### Container Components - TodoHeaderContainer.js
-```javascript
-import { connect } from 'react-redux';
-import TodoHeader from '../../components/TodoHeader';
-
-// 将欲使用的 actions 引入
-import {
-  changeText,
-  createTodo,
-} from '../../actions';
-
-const mapStateToProps = (state) => ({
-  // 从 store 取得 todo state
-  todo: state.getIn(['todo', 'todo'])
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  // 当使用者在 input 输入资料值即会触发这个函数，发出 changeText action 并附上使用者输入内容 event.target.value
-  onChangeText: (event) => (
-    dispatch(changeText({ text: event.target.value }))
-  ),
-  // 当使用者按下送出时，发出 createTodo action 并清空 input 
-  onCreateTodo: () => {
-    dispatch(createTodo());
-    dispatch(changeText({ text: '' }));
-  }
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(TodoHeader);
-```
-
-#### Presentational Components - TodoHeader.js
-```javascript
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-// 开始建设 Component 并使用 connect 进来的 props 并绑定事件（onChange、onClick）。
-// 注意我们的 state 因为是使用 `ImmutableJS` 所以要用 `get()` 取值
-
-const TodoHeader = ({
-  onChangeText,
-  onCreateTodo,
-  todo,
-}) => (
-  <div>
-    <h1>TodoHeader</h1>
-    <input type="text" value={todo.get('text')} onChange={onChangeText} />
-    <button onClick={onCreateTodo}>送出</button>
-  </div>
-);
-
-export default TodoHeader;
-```
-
 ## [React Router 入门实战教学](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch05/react-router-introduction.md)
 
 #### 开始 React Routing 之旅
@@ -571,3 +490,203 @@ class FooComponent extends React.Component {
 以下这张图表示了整个 React Redux App 的资料流程图（使用者与 View 互动 => dispatch 出 Action => Reducers 依据 action tyoe 分配到对应处理方式，回传新的 state => 透过 React Redux 传送给 React，React 重新绘制 View）：
 
 ![](./images/redux-flow.png)
+
+我们先说明整合 react-redux 的用法。从以下这张图可以看到 react-redux 是 React 和 Redux 间的桥梁，使用 Provider、connect 去连结 store 和 React View。
+
+![](./images/using-redux.png)
+
+事实上，整合了 react-redux 后，我们的 React App 就可以解决传统跨 Component 之前传递 state 的问题和困难。只要透过 Provider 就可以让每个 React App 中的 Component 取用 store 中的 state，非常方便（接下来我们也会更详细说明 Container/Component、connect 的用法）。
+
+![](./images/redux-store.png)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redux Todo</title>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+</html>
+```
+
+#### src/index.js 完整程式码
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import Main from './components/Main';
+import store from './store';
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Main />
+  </Provider>,
+  document.getElementById('app')
+);
+```
+
+#### src/components/Main/Main.js 是 Stateless Component，负责所有 View 的进入点
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import TodoHeaderContainer from '../../containers/TodoHeaderContainer';
+import TodoListContainer from '../../containers/TodoListContainer';
+
+const Main = () => (
+  <div>
+    <TodoHeaderContainer />
+    <TodoListContainer />
+  </div>
+);
+
+export default Main;
+```
+
+[查看更多](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch07/react-redux-real-world-example.md)
+
+
+## [Container 与 Presentational Components 入门](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch08/container-presentational-component-.md)
+
+> 以下先参考 Redux 官网 列出两者相异之处：
+> 
+> Presentational Components
+> 
+> - 用途：怎么看事情（Markup、外观）
+> - 是否让 Redux 意识到：否
+> - 取得资料方式：从 props 取得
+> - 改变资料方式：从 props 去呼叫 callback function
+> - 写入方式：手动处理 
+>
+> Container Components 
+> - 用途：怎么做事情（撷取资料，更新 State）
+> - 是否让 Redux 意识到：是
+> - 取得资料方式：订阅 Redux State（store）
+> - 改变资料方式：Dispatch Redux Action
+> - 写入方式：从 React Redux 产生
+> 
+> 从上面的分析读者可以发现，两者最大的差别在于 Component 主要负责单纯的 UI 
+> 的渲染，而 Container 则负责和 Redux 的 store 沟通，作为 Redux 和 Component 之
+> 的桥梁。这样的分法可以让程式架构和职责更清楚，所以接下来我们就使用上一章节的 
+> Redux TodoApp 进行改造，改造成 Container 与 Presentational Components 模式。
+
+#### Container Components - TodoHeaderContainer.js
+
+```javascript
+import { connect } from 'react-redux';
+import TodoHeader from '../../components/TodoHeader';
+
+// 将欲使用的 actions 引入
+import {
+  changeText,
+  createTodo,
+} from '../../actions';
+
+const mapStateToProps = (state) => ({
+  // 从 store 取得 todo state
+  todo: state.getIn(['todo', 'todo'])
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  // 当使用者在 input 输入资料值即会触发这个函数，发出 changeText action 并附上使用者输入内容 event.target.value
+  onChangeText: (event) => (
+    dispatch(changeText({ text: event.target.value }))
+  ),
+  // 当使用者按下送出时，发出 createTodo action 并清空 input 
+  onCreateTodo: () => {
+    dispatch(createTodo());
+    dispatch(changeText({ text: '' }));
+  }
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(TodoHeader);
+```
+
+#### Presentational Components - TodoHeader.js
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+// 开始建设 Component 并使用 connect 进来的 props 并绑定事件（onChange、onClick）。
+// 注意我们的 state 因为是使用 `ImmutableJS` 所以要用 `get()` 取值
+
+const TodoHeader = ({
+  onChangeText,
+  onCreateTodo,
+  todo,
+}) => (
+  <div>
+    <h1>TodoHeader</h1>
+    <input type="text" value={todo.get('text')} onChange={onChangeText} />
+    <button onClick={onCreateTodo}>送出</button>
+  </div>
+);
+
+export default TodoHeader;
+```
+
+#### Container Components - TodoListContainer.js
+
+```js
+import { connect } from 'react-redux';
+import TodoList from '../../components/TodoList';
+
+import {
+  deleteTodo,
+} from '../../actions';
+
+const mapStateToProps = (state) => ({
+  todos: state.getIn(['todo', 'todos'])
+});
+
+// 由 Component 传进欲删除元素的 index
+const mapDispatchToProps = (dispatch) => ({
+  onDeleteTodo: (index) => () => (
+    dispatch(deleteTodo({ index }))
+  )
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(TodoList);
+```
+
+#### Presentational Components - TodoList.js
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+// Component 部分值的注意的是 todos state 是透过 map function 去迭代出元素，由于要让 React JSX 可以渲染并保持传入触发 event state 的 immutable，所以需使用 toJS() 转换 component of array。
+// 由 Component 传进欲删除元素的 index
+
+const TodoList = ({
+  todos,
+  onDeleteTodo,
+}) => (
+  <div>
+    <ul>
+    {
+      todos.map((todo, index) => (
+        <li key={index}>
+          {todo.get('text')}
+          <button onClick={onDeleteTodo(index)}>X</button>
+        </li>
+      )).toJS()
+    }
+    </ul>
+  </div>
+);
+
+export default TodoList;
+```
+
