@@ -690,3 +690,10 @@ const TodoList = ({
 export default TodoList;
 ```
 
+## 附录
+
+### [React ES5、ES6+ 常见用法对照表](https://github.com/carlleton/reactjs101/tree/zh-CN/Appendix01)
+
+### [React 测试入门教学](https://github.com/carlleton/reactjs101/tree/zh-CN/Appendix03)
+
+### [用 React Native + Firebase 开发跨平台行动应用程式](https://github.com/carlleton/reactjs101/tree/zh-CN/Appendix02)
