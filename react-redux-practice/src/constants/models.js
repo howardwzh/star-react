@@ -4,7 +4,7 @@ export const TodoState = Immutable.fromJS({
   'todos': [],
   'todo': {
     id: '',
-    text: 'aaaa',
+    text: 'hello world!',
     updatedAt: '',
     completed: false,
   }

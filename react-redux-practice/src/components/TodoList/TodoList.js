@@ -13,7 +13,7 @@ class TodoList extends React.Component {
           {
             this.props.todos.map((todo, index) => (
               <li key={index}>
-                {todo.get('text')}
+                <span>{todo.get('text')}</span>
                 <button onClick={() => this.onDeleteTodo(index)}>X</button>
               </li>
             ))
