@@ -1,7 +1,6 @@
 import React from 'react'
 import { expect } from 'chai'
 import { shallow, mount, render } from 'enzyme'
-import './.setup.js'
 
 import Todo from '../src/components/Todo'
 
@@ -27,7 +26,7 @@ describe('Todo', function() {
 
     expect(input.length).to.equal(1)
     expect(TodoHeader.props().todo.get('text')).to.equal('hello world!')
-    expect(input.get(0).value).to.equal('hello world!')
+    expect(input.get(0).value).to.equal('hello world!!')
   })
 
   it('in TodoHeader, input change value, should props.todo.text change too', function() {

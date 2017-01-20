@@ -10,7 +10,7 @@ module.exports = function(config) {
 
     preprocessors: {
       // add webpack as preprocessor
-      'src/**/*.js': ['webpack', 'sourcemap'],
+      'src/**/*.js': ['webpack', 'sourcemap', 'coverage'],
       'test/**/*.js': ['webpack', 'sourcemap']
     },
 
@@ -48,14 +48,24 @@ module.exports = function(config) {
       'karma-sourcemap-loader',
       'karma-chrome-launcher',
       'karma-phantomjs-launcher',
+      'karma-coverage',
+      'karma-mocha-reporter',
       'karma-chai'
     ],
-    reporters: ['progress'],
+    reporters: ['mocha', 'coverage'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
-    singleRun: false
+    singleRun: true,
+    coverageReporter: {
+      reporters: [{
+        type: 'text-summary'
+      }, {
+        type: 'html',
+        dir: 'coverage/'
+      }]
+    }
   })
 };
