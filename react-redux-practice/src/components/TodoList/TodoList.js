@@ -1,11 +1,6 @@
 import React from 'react';
 
 class TodoList extends React.Component {
-  constructor(props) {
-    super(props)
-    this.onDeleteTodo = this.props.onDeleteTodo.bind(this)
-  }
-
   render() {
     return (
       <div>
@@ -14,7 +9,7 @@ class TodoList extends React.Component {
             this.props.todos.map((todo, index) => (
               <li key={index}>
                 <span>{todo.get('text')}</span>
-                <button onClick={() => this.onDeleteTodo(index)}>X</button>
+                <button onClick={() => this.props.onDeleteTodo(index)}>X</button>
               </li>
             ))
           }

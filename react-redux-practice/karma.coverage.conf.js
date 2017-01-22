@@ -1,4 +1,20 @@
-var path = require('path');
+let path = require('path')
+var logger = require('./log')
+let _ = require('lodash')
+let preprocessorsObj = ((logger) => {
+  logger.info('start now')
+  const PROC = ['webpack', 'coverage']
+  let allFiles = path.resolve(__dirname, 'src/**/*.js')
+  logger.info(allFiles)
+  let result = {}
+  _.forEach(allFiles, (val) => {
+    if(!(/(index\.)|(\.test.js)/).test(val)){
+      result[val] = PROC
+    }
+  })
+  logger.info(result)
+  return result
+})(logger)
 
 module.exports = function(config) {
   config.set({
@@ -8,10 +24,11 @@ module.exports = function(config) {
       'src/**/*.test.js'
     ],
 
-    preprocessors: {
-      // add webpack as preprocessor
-      'src/**/*.js': ['webpack', 'coverage']
-    },
+    // preprocessors: {
+    //   // add webpack as preprocessor
+    //   'src/**/*.js': ['webpack', 'coverage']
+    // },
+    preprocessors: preprocessorsObj,
 
     webpack: { //kind of a copy of your webpack config
       devtool: 'eval',

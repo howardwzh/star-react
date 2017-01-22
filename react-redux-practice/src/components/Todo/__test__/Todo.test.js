@@ -7,17 +7,14 @@ import Todo from '../Todo'
 describe('Todo', function() {
   let wrapper, TodoHeader, TodoList
 
-  before(() => {
+  beforeEach(() => {
     wrapper = mount(<Todo />)
     TodoHeader = wrapper.find('TodoHeader')
     TodoList = wrapper.find('TodoList')
   })
 
   afterEach(() => {
-    // Todo.prototype.componentDidMount.restore();
-    // wrapper.component.setChildProps({todos: []})
-    // TodoList.setProps({todos: []})
-    // TodoHeader.setProps({todo: {}})
+    TodoList.props().todos.size = 0
   })
 
   it('should have tag TodoHeader', function() {
@@ -76,25 +73,25 @@ describe('Todo', function() {
     expect(TodoList.find('li').at(1).find('span').text()).to.equal('i am item_2')
   })
 
-  // it('in TodoList, click delete button, should props.todos reduce one item', function() {
-  //   const input = TodoHeader.find('input')
-  //   const button = TodoHeader.find('button')
+  it('in TodoList, click delete button, should props.todos reduce one item', function() {
+    const input = TodoHeader.find('input')
+    const button = TodoHeader.find('button')
 
-  //   expect(TodoList.props().todos.size).to.equal(0)
-  //   expect(TodoList.find('li').length).to.equal(0)
+    expect(TodoList.props().todos.size).to.equal(0)
+    expect(TodoList.find('li').length).to.equal(0)
 
-  //   input.simulate('change', {target: {value: 'i am item_1'}})
-  //   button.simulate('click')
+    input.simulate('change', {target: {value: 'i am item_3'}})
+    button.simulate('click')
 
-  //   input.simulate('change', {target: {value: 'i am item_2'}})
-  //   button.simulate('click')
+    expect(TodoList.props().todos.size).to.equal(1)
+    expect(TodoList.props().todos.get(0).get('text')).to.equal('i am item_3')
 
-  //   expect(TodoList.props().todos.size).to.equal(2)
-  //   expect(TodoList.props().todos.get(0).get('text')).to.equal('i am item_1')
-  //   expect(TodoList.props().todos.get(1).get('text')).to.equal('i am item_2')
+    expect(TodoList.find('li').length).to.equal(1)
+    expect(TodoList.find('li').at(0).find('span').text()).to.equal('i am item_3')
 
-  //   expect(TodoList.find('li').length).to.equal(2)
-  //   expect(TodoList.find('li').at(0).find('span').text()).to.equal('i am item_1')
-  //   expect(TodoList.find('li').at(1).find('span').text()).to.equal('i am item_2')
-  // })
+    TodoList.find('li').at(0).find('button').simulate('click')
+
+    expect(TodoList.props().todos.size).to.equal(0)
+    expect(TodoList.find('li').length).to.equal(0)
+  })
 })

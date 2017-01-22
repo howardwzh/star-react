@@ -1,5 +1,3 @@
-require('babel-register')();
-
 if (!global.document) {
   try {
     const jsdom = require('jsdom').jsdom; // could throw
