@@ -212,12 +212,14 @@ class MyComponent extends React.Component {
 MyComponent.propTypes = {
   todo: React.PropTypes.object,
   name: React.PropTypes.string,
+  handleClick: React.PropTypes.func
 }
 
 // Prop 预设值，若对应 props 没传入值将会使用 default 值
 MyComponent.defaultProps = {
- todo: {}, 
- name: '', 
+ todo: {},
+ name: '',
+ handleClick: () => { console.log('Hello click!') }
 }
 ```
 
@@ -271,7 +273,7 @@ react-router 内部的组件。
 
 1. Router Router 是放置 Route 的容器，其本身不定义 routing ，真正 routing 规则由 Route 定义。
 2. Route Route 负责 URL 和对应的组件关系，可以有多个 Route 规则也可以有嵌套（nested）Routing。像下面的例子就是每个页面都会先载入 App 组件再载入对应 URL 的组件。
-3. history Router 中有一个属性 history 的规则，这边使用我们使用 hashHistory，使用 routing 将由 hash（#）变化决定。例如：当使用者拜访 http://www.github.com/，实际看到的会是 http://www.github.com/#/。下列范例若是拜访了 /about 则会看到 http://localhost:8008/#/about 并载入 App 组件再载入 About 组件。
+3. history Router 中有一个属性 history 的规则，这边使用我们使用 hashHistory，使用 routing 将由 hash（#）变化决定。例如：当使用者拜访 http://www.github.com/ ，实际看到的会是 http://www.github.com/#/ 。下列范例若是拜访了 /about 则会看到 http://localhost:8008/#/about 并载入 App 组件再载入 About 组件。
   + hashHistory 教学范例使用的，会通过 hash 进行对应。好处是简单易用，不用多余设定。
   + browserHistory 适用于伺服器端渲染，但需要设定伺服器端避免处理错误，这部份我们会在后面的章节详细说明。注意的是若是使用 Webpack 开发用伺服器需加上 --history-api-fallback
   `$ webpack-dev-server --inline --content-base . --history-api-fallback`
@@ -468,7 +470,7 @@ var y = x.set('foo', 'azz');
 x === y; // false
 ```
 
-在 ES6 中可以使用官方文件上的 PureRenderMixin 进行比较，可以让程式码更简洁：
+在 ES6 中可以使用官方文件上的 **PureRenderMixin** 进行比较，可以让程式码更简洁：
 
 ```
 import PureRenderMixin from 'react-addons-pure-render-mixin';
