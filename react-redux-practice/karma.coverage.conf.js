@@ -10,12 +10,12 @@ module.exports = function(config) {
 
     preprocessors: {
       // add webpack as preprocessor
-      'src/**/*.js': ['webpack', 'sourcemap', 'coverage'],
-      'test/**/*.js': ['webpack', 'sourcemap']
+      'src/**/*.js': ['webpack', 'coverage'],
+      'test/**/*.js': ['webpack']
     },
 
     webpack: { //kind of a copy of your webpack config
-      devtool: 'inline-source-map', //just do inline source maps instead of the default
+      devtool: 'eval',
       module: {
         preLoaders: [{
           test: /\.js$/,
