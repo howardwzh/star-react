@@ -1,0 +1,43 @@
+/*
+* Franklin Layout
+*/
+
+*:focus {
+  outline: none;
+}
+
+.layout {
+  header.main {
+    height: header-height(small);
+    @include breakpoint(medium) {
+      height: header-height(medium);
+    }
+  }
+
+  .content {
+    display: flex;
+    height: editor-height(small);
+    width: 100%;
+    max-width: 100vw;
+    @include breakpoint(medium) {
+      height: editor-height(medium);
+    }
+
+    .dropzone {
+      height: 100%;
+      flex: 1 1 50%;
+    }
+
+    .toolbar {
+      height: 100%;
+      width: $toolbar-width;
+    }
+  }
+
+  footer.main {
+    height: footer-height(small);
+    @include breakpoint(medium) {
+      height: footer-height(medium);
+    }
+  }
+}

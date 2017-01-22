@@ -5,13 +5,12 @@ module.exports = function(config) {
     basePath: '',
     frameworks: ['mocha', 'chai'],
     files: [
-      'test/**/*.js'
+      'src/**/*.test.js'
     ],
 
     preprocessors: {
       // add webpack as preprocessor
-      'src/**/*.js': ['webpack', 'sourcemap'],
-      'test/**/*.js': ['webpack', 'sourcemap']
+      'src/**/*.js': ['webpack', 'sourcemap']
     },
 
     webpack: { //kind of a copy of your webpack config
@@ -19,7 +18,7 @@ module.exports = function(config) {
       module: {
         preLoaders: [{
           test: /\.js$/,
-          exclude: [/node_modules/, /\.spec.js$/],
+          exclude: [/node_modules/, /\.test.js$/],
           loader: 'isparta-instrumenter'
         }],
         loaders: [{
@@ -55,7 +54,7 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
     singleRun: false
   })
 };

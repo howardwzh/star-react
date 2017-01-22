@@ -1,0 +1,74 @@
+.nucleotide {
+  fill: transparent;
+
+  text {
+    font-family: Consolas, 'Courier new';
+    font-size: 20;
+  }
+
+  .type {
+
+    text {
+      fill: $body-font-color;
+    }
+
+    &.in-selection {
+      text {
+        fill: $primary-color !important;
+      }
+    }
+
+    &.in-exon,
+    &.in-multiple-exons {
+      rect.type-background {
+        fill: lighten($light-yeah, 10%);
+      }
+
+      text {
+        fill: $white;
+      }
+    }
+
+    &.in-multiple-exons {
+      rect.type-background {
+        fill: $light-yeah;
+      }
+    }
+  }
+
+  .position {
+    visibility: hidden;
+    stroke: $light-yeah;
+    stroke-width: 6;
+
+    .position-background {
+      fill: $light-yeah;
+    }
+
+    .type-highlight {
+      stroke-opacity: 0.2;
+    }
+
+    text {
+      stroke-width: 0;
+      fill: $white;
+    }
+
+    &.selected {
+      visibility: visible;
+      stroke: $primary-color;
+
+      .position-background {
+        fill: $primary-color;
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .position {
+      visibility: visible;
+    }
+  }
+}
