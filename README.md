@@ -13,6 +13,7 @@
 - [react-boilerplate](https://github.com/mxstbr/react-boilerplate/tree/master/docs)
 - [React 测试入门教程](http://www.ruanyifeng.com/blog/2016/02/react-testing-tutorial.html)
 - [React-Native学习指南](https://github.com/reactnativecn/react-native-guide)
+- **[react-native中文文档-嵌入到现有原生应用](http://reactnative.cn/docs/0.40/integration-with-existing-apps.html#content)**
 
 # 开始旅程
 
