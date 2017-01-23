@@ -1,22 +1,6 @@
 let path = require('path')
-var logger = require('./log')
-let _ = require('lodash')
-let preprocessorsObj = ((logger) => {
-  logger.info('start now')
-  const PROC = ['webpack', 'coverage']
-  let allFiles = path.resolve(__dirname, 'src/**/*.js')
-  logger.info(allFiles)
-  let result = {}
-  _.forEach(allFiles, (val) => {
-    if(!(/(index\.)|(\.test.js)/).test(val)){
-      result[val] = PROC
-    }
-  })
-  logger.info(result)
-  return result
-})(logger)
 
-module.exports = function(config) {
+module.exports = (config) => {
   config.set({
     basePath: '',
     frameworks: ['mocha', 'chai'],
@@ -24,27 +8,30 @@ module.exports = function(config) {
       'src/**/*.test.js'
     ],
 
-    // preprocessors: {
-    //   // add webpack as preprocessor
-    //   'src/**/*.js': ['webpack', 'coverage']
-    // },
-    preprocessors: preprocessorsObj,
+    preprocessors: {
+      // add webpack as preprocessor
+      'src/**/*.test.js': ['webpack']
+    },
 
     webpack: { //kind of a copy of your webpack config
       devtool: 'eval',
       module: {
-        preLoaders: [{
-          test: /\.js$/,
-          exclude: [/node_modules/, /\.test.js$/],
-          loader: 'isparta-instrumenter'
-        }],
+        preLoaders: [
+          // transpile and instrument only testing sources with isparta
+          {
+            test: /\.jsx?$/,
+            // exclude this dirs from coverage
+            exclude: [path.resolve(__dirname, 'node_modules'), /\.test.js$/],
+            loader: 'isparta-instrumenter'
+          }
+        ],
         loaders: [{
           test: /\.js$/,
           loader: 'babel',
           exclude: path.resolve(__dirname, 'node_modules')
         }, {
           test: /\.json$/,
-          loader: 'json',
+          loader: 'json'
         }]
       },
       externals: {
@@ -61,7 +48,6 @@ module.exports = function(config) {
     plugins: [
       'karma-webpack',
       'karma-mocha',
-      'karma-sourcemap-loader',
       'karma-chrome-launcher',
       'karma-phantomjs-launcher',
       'karma-coverage',
@@ -84,4 +70,4 @@ module.exports = function(config) {
       }]
     }
   })
-};
+}

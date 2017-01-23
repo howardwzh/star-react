@@ -1,6 +1,6 @@
-var path = require('path');
+let path = require('path')
 
-module.exports = function(config) {
+module.exports = (config) => {
   config.set({
     basePath: '',
     frameworks: ['mocha', 'chai'],
@@ -10,24 +10,19 @@ module.exports = function(config) {
 
     preprocessors: {
       // add webpack as preprocessor
-      'src/**/*.js': ['webpack', 'sourcemap']
+      'src/**/*.test.js': ['webpack', 'sourcemap']
     },
 
     webpack: { //kind of a copy of your webpack config
-      devtool: 'eval',
+      devtool: 'inline-source-map',
       module: {
-        preLoaders: [{
-          test: /\.js$/,
-          exclude: [/node_modules/, /\.test.js$/],
-          loader: 'isparta-instrumenter'
-        }],
         loaders: [{
           test: /\.js$/,
           loader: 'babel',
           exclude: path.resolve(__dirname, 'node_modules')
         }, {
           test: /\.json$/,
-          loader: 'json',
+          loader: 'json'
         }]
       },
       externals: {
@@ -57,4 +52,4 @@ module.exports = function(config) {
     browsers: ['PhantomJS'],
     singleRun: false
   })
-};
+}
