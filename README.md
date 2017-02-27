@@ -12,8 +12,6 @@
 - [React学习资源汇总](https://github.com/tsrot/study-notes/blob/master/React%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB.md)
 - [react-boilerplate](https://github.com/mxstbr/react-boilerplate/tree/master/docs)
 - [React 测试入门教程](http://www.ruanyifeng.com/blog/2016/02/react-testing-tutorial.html)
-- [React-Native学习指南](https://github.com/reactnativecn/react-native-guide)
-- **[react-native中文文档-嵌入到现有原生应用](http://reactnative.cn/docs/0.40/integration-with-existing-apps.html#content)**
 
 # 开始旅程
 
@@ -700,6 +698,3 @@ export default TodoList;
 
 ### [React 测试入门教学](https://github.com/carlleton/reactjs101/tree/zh-CN/Appendix03)
 - [enzyme](http://airbnb.io/enzyme/docs/api/)
-
-
-### [用 React Native + Firebase 开发跨平台行动应用程式](https://github.com/carlleton/reactjs101/tree/zh-CN/Appendix02)
