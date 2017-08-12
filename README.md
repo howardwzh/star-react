@@ -19,7 +19,6 @@
 # 开始旅程
 
 ## [React 生态系（Ecosystem）入门简介](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch01/react-ecosystem-introduction.md)
-
 > 根据 React 官方网站 的说明：React 是一个专注于 UI（View）的 JavaScript > 
 > 函式库（Library）。自从 Facebook 于 2013 年开源 React 
 > 这个函式库后，相关的生态系开始蓬勃发展。事实上，透过学习 React 
@@ -28,65 +27,51 @@
 > 者。
 
 #### ReactJS
-
 ReactJS 是 Facebook 推出的 JavaScript 函式库，若以 MVC 框架来看，React 定位是在 View 的范畴。在 ReactJS 0.14 版之后，ReactJS 更把原先处理 DOM 的部分独立出去（react-dom），让 ReactJS 核心更单纯，也更符合 React 所倡导的 Learn once, write everywhere 的理念。事实上，ReactJS 本身的 API 相对单纯，但由于整个生态系非常庞大，因此学习 React 却是一条漫长的道路。此外，当你想把 React 应用在你的应用程式时，你通常必须学习整个 React Stack 才能充分发挥 React 的最大优势。
 
 #### JSX
-
 事实上，JSX 并非一种全新的语言，而是一种语法糖（Syntatic Sugar），一种语法类似 XML 的 ECMAScript 语法扩充。
 
 #### NPM
 
 #### ES6+
-
 ES6+ 系指 ES6（ES2015）和 ES7 的联集，在 ES6+ 新的标准当中引入许多新的特性和功能，弥补了过去 JavaScript 被诟病的一些特性。由于未来 React 将以支援 ES6+ 为主，因此直接学习 ES6+ 用法是相对好的选择，本书的所有范例也将会以 ES6+ 撰写。
 
 #### Babel
-
 由于并非所有浏览器都支援 ES6+ 语法，所以透过 Babel 这个 JavaScript 编译器（可以想成是翻译机或是翻译蒟篛）可以让你的 ES6+ 、JSX 等程式码转换成浏览器可以看的懂得语法。通常会在资料夹的 root 位置加入 .bablerc 进行转译规则 preset 和引用外挂（plugin）的设定。
 
 #### JavaScript 模组化开发
-
 随着 Web 应用程式的复杂性提高，JavaScript 模组化开发已经成为必然的趋势，以下简单介绍 JavaScript 模组化的相关规范。事实上，在一开始没有官方定义的标准时出现了各种社群自行定义的规范和实践。
 
 #### Webpack/Browserify + Gulp
 
 #### ESLint
-
 ESLint 是一个提供 JavaScript 和 JSX 的程式码检查工具，可以确保团队的程式码品质。其支援可插拔的特性，可以根据需求在 .eslintrc 设定检查规则。目前主流的检查规则会使用 Airbnb 所释出的 Airbnb React/JSX Style Guide，在使用上需先安装 eslint-config-airbnb 等套件。
 
 #### React Router
-
 React Router 是 React 中主流使用的 Routing 函式库，透过 URL 的变化来管理对应的状态和组件。若开发不刷页的单页式（single page application）的 React 应用程式通常都会需要用到。
 
 #### Flux/Redux
-
 Flux 是一个实现单项流的应用程式资料架构（architecture），同样是由 Facebook 推出，并和 React 专注于 View 的部份形成互补。而由 Dan Abramov 所开发的 Redux 被 React 开发社群认为是 Flux-like 更优雅的作法，也是目前主流搭配 React 的状态（State）管理工具。让你在开发复杂的应用程式时可以更方便管理你的状态（state）。
 
 #### ImmutableJS
-
 ImmutableJS，是一个能让开发者建立不可变资料结构的函式库。建立不可变（immutable）资料结构不仅可以让状态可预测性更高，也可以提升程式的效能。
 
 #### Isomorphic JavaScript
-
 Isomorphic JavaScript 是指前后端（Client/Server）共用相同部分的程式码，让 JavaScript 应用可以同时执行在浏览器端和伺服器端，在 React 中可以透过伺服器端渲染（server side rendering）静态 HTML 的方式达到 Isomorphic JavaScript 效果，让 SEO 和执行效能更加提升并让前后端共用程式码。而另一个常一起出现的 Universal JavaScript 一般定义更为广泛，系指可以运行在不同环境下的 JavaScript Code，并不局限于浏览器和伺服器端。但要留意的是在 Github 和许多技术文章的分享上会把两者定义为同一件事情。
 
 #### React 测试
-
 Facebook 本身有提供 Test Utilities，但由于不够好用，所以目前主流开发社群比较倾向使用 Airbnb 团队开发的 enzyme，其可以与市面上常见的测试工具（Mocha、Karma、Jest 等）搭配使用。其中 Jest 是 Facebook 所开发的单元测试工具，其主要基于 Jasmine 所建立的测试框架。Jest 除了支援 JSDOM 外，也可以自动模拟 (mock) 透过 require() 进来的模组，让开发者可以更专注在目前被测试的模组中。
 
 #### React Native
-
 React Native和过去的 Apache Cordova 等基于 WebView 的解决方案比较不同，它让开发者可以使用 React 和 JavaScript 开发原生应用程式（Native App），让 Learn once, write anywhere 理想变得可能。
 
 #### GraphQL/Relay
-
 GraphQL 是 Facebook 所开发的资料查询语言（Data Query Language），主要是想解决传统 RESTful API 所遇到的一些问题，并提供前端更有弹性的 API 设计方式。Relay 则是 Facebook 提出搭配 GraphQL 用于 React 的一个宣告式数据框架，可以降低 Ajax 的请求数量（类似的框架还有 Netflix 推出的 Falcor）。但由于目前主流的后端 API 仍以传统 RESTful API 设计为主，所以在使用 GraphQL 上通常会需要比较大架构设计的变动。因此本书则是把 GraphQL/Relay 介绍放到附录的部份，让有兴趣的读者可以自行参考体验一下。
 
 ## [React 开发环境设置与 Webpack 入门教学](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch02/webpack-dev-enviroment.md)
 
 #### JavaScript 模组化
-
 **总的来说，使用模组化开发 JavaScript 应用程式主要有以下三种好处：**
 
 1. 提升维护性（Maintainability）
@@ -126,7 +111,6 @@ GraphQL 是 Facebook 所开发的资料查询语言（Data Query Language），�
 ```
 
 #### Webpack
-
 **[Webpack](https://webpack.github.io/) 是一个模组打包工具（module bundler），以下列出 Webpack 的几项主要功能：**
 
 - 将 CSS、图片与其他资源打包
@@ -137,13 +121,11 @@ GraphQL 是 Facebook 所开发的资料查询语言（Data Query Language），�
 ## [ReactJS 与 Component 设计入门介绍](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch03/reactjs-introduction.md)
 
 #### ReactJS 特性简介
-
 **ReactJS 的出现让前端开发有许多革新性的思维出现，其中有几个重要特性值得我们去探讨：**
 
 1. 基于组件（Component）化思考
 
 **<TodoApp> 组件可以包含 <TodoHeader />、<TodoList /> 子组件**
-
 ```html
 <div>
     <TodoHeader />
@@ -152,7 +134,6 @@ GraphQL 是 Facebook 所开发的资料查询语言（Data Query Language），�
 ```
 
 **<TodoList /> 组件内部长相：**
-
 ```html
 <div>
     <ul>
@@ -269,7 +250,6 @@ ReactDOM.render(<div style={divStyle}>Hello World!</div>, document.getElementByI
 ## [React Router 入门实战教学](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch05/react-router-introduction.md)
 
 #### 开始 React Routing 之旅
-
 以下是 webpack.config.js 的进入点 **src/index.js**，负责管理 Router 和 render 
 组件。这边我们要先详细讨论的是，为了使用 React Router 功能引入了许多 
 react-router 内部的组件。
@@ -377,7 +357,6 @@ export default Repos;
 ![](./assets-for-readme/images/router-result.png)
 
 ## [ImmutableJS](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch06/react-immutable-introduction.md)
-
 **当 map1 值一改，map2 的值也会受影响。**
 
 ```js
@@ -399,7 +378,6 @@ map2.get('a'); // 2
 ```
 
 #### ImmutableJS 特性介绍
-
 ImmutableJS 提供了 7 种不可修改的资料类型：List、Map、Stack、OrderedMap、Set、OrderedSet、Record。若是对 Immutable 物件操作都会回传一个新值。其中比较常用的有 List、Map 和 Set：
 
 1. Map：类似于 key/value 的 object，在 ES6 也有原生 Map 对应
@@ -443,7 +421,6 @@ map1.merge(map6);
 #### [ImmutableJS 的特性整理](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch06/react-immutable-introduction.md#immutablejs-的特性整理)
 
 #### [React 效能优化](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch06/react-immutable-introduction.md#react-效能优化)
-
 ImmutableJS 除了可以和 Flux/Redux 整合外，也可以用于基本 react 效能优化。以下是一般使用效能优化的简单方式：
 
 传统 JavaScript 比较方式，若资料型态为 Primitive 就不会有问题：
@@ -491,7 +468,6 @@ class FooComponent extends React.Component {
 ## [Redux 基础概念](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch07/react-redux-introduction.md)
 
 ## [Redux 实战入门](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch07/react-redux-real-world-example.md)
-
 以下这张图表示了整个 React Redux App 的资料流程图（使用者与 View 互动 => dispatch 出 Action => Reducers 依据 action tyoe 分配到对应处理方式，回传新的 state => 透过 React Redux 传送给 React，React 重新绘制 View）：
 
 ![](./assets-for-readme/images/redux-flow.png)
@@ -518,7 +494,6 @@ class FooComponent extends React.Component {
 ```
 
 #### src/index.js 完整程式码
-
 ```
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -554,9 +529,7 @@ export default Main;
 
 [查看更多](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch07/react-redux-real-world-example.md)
 
-
 ## [Container 与 Presentational Components 入门](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch08/container-presentational-component-.md)
-
 > 以下先参考 Redux 官网 列出两者相异之处：
 > 
 > Presentational Components
@@ -580,7 +553,6 @@ export default Main;
 > Redux TodoApp 进行改造，改造成 Container 与 Presentational Components 模式。
 
 #### Container Components - TodoHeaderContainer.js
-
 ```javascript
 import { connect } from 'react-redux';
 import TodoHeader from '../../components/TodoHeader';
@@ -615,7 +587,6 @@ export default connect(
 ```
 
 #### Presentational Components - TodoHeader.js
-
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -639,7 +610,6 @@ export default TodoHeader;
 ```
 
 #### Container Components - TodoListContainer.js
-
 ```js
 import { connect } from 'react-redux';
 import TodoList from '../../components/TodoList';
@@ -666,7 +636,6 @@ export default connect(
 ```
 
 #### Presentational Components - TodoList.js
-
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -696,14 +665,11 @@ export default TodoList;
 ```
 
 ## 附录
-
-### [React ES5、ES6+ 常见用法对照表](https://github.com/carlleton/reactjs101/tree/zh-CN/Appendix01)
-
-### [React 测试入门教学](https://github.com/carlleton/reactjs101/tree/zh-CN/Appendix03)
+- [React ES5、ES6+ 常见用法对照表](https://github.com/carlleton/reactjs101/tree/zh-CN/Appendix01)
+- [代码规范](./1.code-standards.md)
+- [React 测试入门教学](https://github.com/carlleton/reactjs101/tree/zh-CN/Appendix03)
 - [enzyme](http://airbnb.io/enzyme/docs/api/)
-
-### 一张图读懂 React 技术栈
+- 一张图读懂 React 技术栈
 ![](./assets-for-readme/images/react-in-one-picture.png)
-
-### 生命周期
+- 生命周期
 ![](./assets-for-readme/images/life-circle.png)
