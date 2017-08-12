@@ -703,7 +703,7 @@ export default TodoList;
 - [enzyme](http://airbnb.io/enzyme/docs/api/)
 
 ### 一张图读懂 React 技术栈
-![](./assets-for-readme/react-in-one-picture.png)
+![](./assets-for-readme/images/react-in-one-picture.png)
 
 ### 生命周期
-![](./assets-for-readme/life-circle.png)
+![](./assets-for-readme/images/life-circle.png)
