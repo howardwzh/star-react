@@ -1,8 +1,8 @@
-![](./images/banner-react.png)
+![](./assets-for-readme/images/banner-react.png)
 > 前言：
 > - 主要参考[《從零開始學 ReactJS》](https://github.com/carlleton/reactjs101/tree/zh-CN)的顺序边学边练习的方式推进
 > - 其中demos参考自 *阮一峰* 的[《全栈工程师培训材料-demos》](https://github.com/ruanyf/jstraining/tree/master/demos)中的react部分
-> - 最后自行进行提炼总结，再利用一个完整的项目进行大练兵。
+> - 最后开发一个完整的项目进行提炼总结。
 
 # 参考资料
 - [一看就懂的ReactJs入门教程-精华版](http://www.cnblogs.com/yunfeifei/p/4486125.html)
@@ -12,6 +12,9 @@
 - [React学习资源汇总](https://github.com/tsrot/study-notes/blob/master/React%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB.md)
 - [react-boilerplate](https://github.com/mxstbr/react-boilerplate/tree/master/docs)
 - [React 测试入门教程](http://www.ruanyifeng.com/blog/2016/02/react-testing-tutorial.html)
+
+# 架子库
+- [create-react-app](https://github.com/facebookincubator/create-react-app)
 
 # 开始旅程
 
@@ -371,7 +374,7 @@ Repos.propTypes = {
 export default Repos;
 ```
 
-![](./images/router-result.png)
+![](./assets-for-readme/images/router-result.png)
 
 ## [ImmutableJS](https://github.com/carlleton/reactjs101/blob/zh-CN/Ch06/react-immutable-introduction.md)
 
@@ -491,15 +494,15 @@ class FooComponent extends React.Component {
 
 以下这张图表示了整个 React Redux App 的资料流程图（使用者与 View 互动 => dispatch 出 Action => Reducers 依据 action tyoe 分配到对应处理方式，回传新的 state => 透过 React Redux 传送给 React，React 重新绘制 View）：
 
-![](./images/redux-flow.png)
+![](./assets-for-readme/images/redux-flow.png)
 
 我们先说明整合 react-redux 的用法。从以下这张图可以看到 react-redux 是 React 和 Redux 间的桥梁，使用 Provider、connect 去连结 store 和 React View。
 
-![](./images/using-redux.png)
+![](./assets-for-readme/images/using-redux.png)
 
 事实上，整合了 react-redux 后，我们的 React App 就可以解决传统跨 Component 之前传递 state 的问题和困难。只要透过 Provider 就可以让每个 React App 中的 Component 取用 store 中的 state，非常方便（接下来我们也会更详细说明 Container/Component、connect 的用法）。
 
-![](./images/redux-store.png)
+![](./assets-for-readme/images/redux-store.png)
 
 ```html
 <!DOCTYPE html>
@@ -698,3 +701,9 @@ export default TodoList;
 
 ### [React 测试入门教学](https://github.com/carlleton/reactjs101/tree/zh-CN/Appendix03)
 - [enzyme](http://airbnb.io/enzyme/docs/api/)
+
+### 一张图读懂 React 技术栈
+![](./assets-for-readme/react-in-one-picture.png)
+
+### 生命周期
+![](./assets-for-readme/life-circle.png)
