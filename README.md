@@ -43,7 +43,7 @@ ES6+ 系指 ES6（ES2015）和 ES7 的联集，在 ES6+ 新的标准当中引入
 #### JavaScript 模组化开发
 随着 Web 应用程式的复杂性提高，JavaScript 模组化开发已经成为必然的趋势，以下简单介绍 JavaScript 模组化的相关规范。事实上，在一开始没有官方定义的标准时出现了各种社群自行定义的规范和实践。
 
-#### Webpack/Browserify + Gulp
+#### [Webpack Gulp](https://github.com/howardwzh/star-webpack-gulp)
 
 #### ESLint
 ESLint 是一个提供 JavaScript 和 JSX 的程式码检查工具，可以确保团队的程式码品质。其支援可插拔的特性，可以根据需求在 .eslintrc 设定检查规则。目前主流的检查规则会使用 Airbnb 所释出的 Airbnb React/JSX Style Guide，在使用上需先安装 eslint-config-airbnb 等套件。
