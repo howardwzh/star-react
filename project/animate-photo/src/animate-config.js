@@ -14,7 +14,7 @@ const data = [{
     value: require('./photos/scene1-pdt1.JPG'),
     animateIn: 'fadeInUp',
     animateOut: 'fadeOutDown',
-    pos: 'bottom-left'
+    pos: 'top-left'
   }]
 }, {
   pic: {
@@ -26,7 +26,18 @@ const data = [{
     value: '第一次游玩',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
-  }
+  },
+  pdt: [{
+    value: require('./photos/scene2-pdt1.gif'),
+    animateIn: 'zoomIn',
+    animateOut: 'zoomOut',
+    pos: 'center-left'
+  },{
+    value: require('./photos/scene2-pdt2.gif'),
+    animateIn: 'zoomIn',
+    animateOut: 'zoomOut',
+    pos: 'center-right'
+  }]
 }, {
   pic: {
     value: require('./photos/scene3.JPG'),
@@ -38,7 +49,14 @@ const data = [{
     animateIn: 'fadeIn',
     animateOut: 'fadeOut',
     pos: 'bottom'
-  }
+  },
+  pdt: [{
+    value: require('./photos/scene3-pdt1.gif'),
+    animateIn: 'zoomIn',
+    animateOut: 'zoomOut',
+    pos: 'bottom',
+    width: '50%'
+  }]
 }, {
   pic: {
     value: require('./photos/scene4.JPG'),

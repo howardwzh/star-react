@@ -1,6 +1,7 @@
 ## 动画样式名称
 
 **[查看效果](https://daneden.github.io/animate.css/)**
+**[love挂件素材](https://www.google.com/search?rlz=1C2CHWL_zh-CNCN757&biw=1920&bih=901&tbm=isch&sa=1&q=love+%E6%8C%82%E4%BB%B6+gif&oq=love+%E6%8C%82%E4%BB%B6+gif&gs_l=psy-ab.3...158177.159375.0.160021.2.2.0.0.0.0.382.382.3-1.1.0....0...1.4.64.psy-ab..1.0.0.Oe83jEFWagY#imgrc=bjP7oz8EXxD0hM:)**
 
 - bounce
 - flash
