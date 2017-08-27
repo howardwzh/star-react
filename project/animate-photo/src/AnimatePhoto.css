@@ -19,70 +19,17 @@
   position: absolute;
   z-index: 10;
   width: 100%;
-  top: 5%;
   margin: 0;
   font-size: 1rem;
   color: #333;
-  padding: 10px 0;
-  background-color: rgba(255, 255, 255, .6);
-}
-.scene h5.top {
-  top: 5%;
-}
-.scene h5.bottom {
-  top: initial;
-  bottom: 5%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, .7);
 }
 .scene img {
   position: absolute;
   width: 10%;
-  top: 5%;
   margin: 0;
-}
-.scene img.top-left {
-  top: 5%;
-  left: 5%;
-}
-.scene img.top {
-  top: 5%;
-  left: 50%;
-  margin-left: -5%;
-}
-.scene img.top-right {
-  top: 5%;
-  right: 5%;
-}
-.scene img.center-left {
-  top: 50%;
-  margin-top: -10%; 
-  left: 5%;
-}
-.scene img.center {
-  top: 50%;
-  margin-top: -10%; 
-  left: 50%;
-  margin-left: -5%;
-}
-.scene img.center-right {
-  top: 50%;
-  margin-top: -10%;
-  right: 5%;
-}
-.scene img.bottom-left {
-  top: initial;
-  bottom: 5%;
-  left: 5%;
-}
-.scene img.bottom {
-  top:initial;
-  bottom: 5%;
-  left: 50%;
-  margin-left: -5%;
-}
-.scene img.bottom-right {
-  top: initial;
-  bottom: 5%;
-  right: 5%;
 }
 .animated {
   -webkit-animation-duration: 2s;
