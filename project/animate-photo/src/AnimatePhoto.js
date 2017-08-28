@@ -12,7 +12,6 @@ class AnimatePhoto extends Component {
       prevIndex: -1,
       currentIndex: 0,
       totle: this.props.data.length
-      // totle: 1
     }
   }
 
