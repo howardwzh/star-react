@@ -16,7 +16,7 @@
   height: 32px;
   opacity: 0;
 }
-.player-on {
+.player-off {
   top: 9px;
   left: 10px;
   position: absolute;
@@ -25,7 +25,7 @@
   border-left: 4px solid #555;
   border-right: 4px solid #555;
 }
-.player-off {
+.player-on {
   top: 8px;
   left: 12px;
   position: absolute;
