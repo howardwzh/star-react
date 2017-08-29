@@ -6,8 +6,8 @@ const data = [{
   },
   des: {
     value: '第一次合照时的紧张',
-    animateIn: 'fadeInLeft',
-    animateOut: 'fadeOutRight'
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
   },
   pdt: [{
     value: require('./images/pendants/pdt1.gif'),
@@ -39,7 +39,7 @@ const data = [{
   des: {
     value: '不约而同的回眸：）',
     animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateOut: 'fadeOut'
   },
   pdt: [{
     value: require('./images/pendants/pdt18.gif'),
@@ -54,23 +54,23 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_4.jpg'),
-    animateIn: 'fadeIn',
+    animateIn: 'flipInY',
     animateOut: 'flipOutY'
   },
   des: {
     value: '松山湖我来了，瘦瘦的我也想追求自己的幸福',
-    animateIn: 'flipInY',
+    animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   }
 }, {
   pic: {
     value: require('./images/photos/photo_luck_5.jpg'),
     animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateOut: 'zoomOut'
   },
   des: {
     value: '美丽的女孩，什么时候能紧紧握住你的手呢？',
-    animateIn: 'flipInY',
+    animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
   pdt: [{
@@ -86,8 +86,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_6.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'zoomIn',
+    animateOut: 'rotateOut'
   },
   des: {
     value: '感谢上天，我们终于画了我们自己的爱情之心啦',
@@ -107,7 +107,7 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_7.jpg'),
-    animateIn: 'fadeIn',
+    animateIn: 'rotateIn',
     animateOut: 'flipOutY'
   },
   des: {
@@ -128,8 +128,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_8.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'flipInY',
+    animateOut: 'fadeOut'
   },
   des: {
     value: '珠海玩得开心不？',
@@ -150,7 +150,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_9.jpg'),
     animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateOut: 'rotateOut'
   },
   des: {
     value: '当时找了好久，终于买到了一束花<br/>希望心上人能喜欢哟~',
@@ -160,7 +160,7 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_10.jpg'),
-    animateIn: 'fadeIn',
+    animateIn: 'zoomIn',
     animateOut: 'flipOutY'
   },
   des: {
@@ -181,8 +181,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_11.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'rotateIn',
+    animateOut: 'fadeOut'
   },
   des: {
     value: '笑得好开心，喜欢你天真浪漫的样子~',
@@ -202,8 +202,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_12.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'flipInY',
+    animateOut: 'rotateOut'
   },
   des: {
     value: '终于爬到山顶啦，照张相留下幸福的一刻~',
@@ -224,7 +224,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_13.jpg'),
     animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateOut: 'rotateOut'
   },
   des: {
     value: '嘻嘻，秀秀情侣对戒，呛是蛮般配啦：）',
@@ -244,8 +244,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_14.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'zoomIn',
+    animateOut: 'fadeOut'
   },
   des: {
     value: '这次我们去大夫山玩，调皮的摆个造型咯，哈哈',
@@ -265,8 +265,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_15.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'rotateIn',
+    animateOut: 'zoomOut'
   },
   des: {
     value: '这pose玩得666，想来个回马枪不？',
@@ -287,7 +287,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_16.jpg'),
     animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateOut: 'fadeOut'
   },
   des: {
     value: '出来“混的”，早晚要在一起不，亲爱的以后咱们一起闯荡吧~',
@@ -307,8 +307,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_17.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'zoomIn',
+    animateOut: 'zoomOut'
   },
   des: {
     value: '嘻嘻，抱得美人归，夫复何求呢？',
@@ -328,8 +328,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_18.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'rotateIn',
+    animateOut: 'rotateOut'
   },
   des: {
     value: '第一次跟亲爱的回卷桥，感觉好紧张哟~',
@@ -349,7 +349,7 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_19.jpg'),
-    animateIn: 'fadeIn',
+    animateIn: 'flipInY',
     animateOut: 'flipOutY'
   },
   des: {
@@ -361,7 +361,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_20.jpg'),
     animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateOut: 'zoomOut'
   },
   des: {
     value: '第一次看到那么多桔子，有口福啦，嘿嘿~',
@@ -381,8 +381,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_21.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'zoomIn',
+    animateOut: 'rotateOut'
   },
   des: {
     value: '观音山我们来啦，谢谢老天让我跟美丽的红儿在这茫茫人海中相遇：）',
@@ -392,7 +392,7 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_22.jpg'),
-    animateIn: 'fadeIn',
+    animateIn: 'rotateIn',
     animateOut: 'flipOutY'
   },
   des: {
@@ -403,8 +403,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_23.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'flipInY',
+    animateOut: 'fadeOut'
   },
   des: {
     value: '巧遇送子观音，嘻嘻~',
@@ -425,7 +425,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_24.jpg'),
     animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateOut: 'rotateOut'
   },
   des: {
     value: '拜一拜，要诚心诚意，这样才灵验么：）',
@@ -435,7 +435,7 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_25.jpg'),
-    animateIn: 'fadeIn',
+    animateIn: 'zoomIn',
     animateOut: 'flipOutY'
   },
   des: {
@@ -456,8 +456,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_25_1.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'rotateIn',
+    animateOut: 'fadeOut'
   },
   des: {
     value: '第一次坐飞机，而且是跟心爱的姑娘一起哟',
@@ -477,8 +477,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_26.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'flipInY',
+    animateOut: 'rotateOut'
   },
   des: {
     value: '上海的东方之珠，是你喜欢的建筑啦',
@@ -489,7 +489,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_26_1.jpg'),
     animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateOut: 'rotateOut'
   },
   des: {
     value: '我们的爸妈终于也要见面了，当时希望一切都顺顺利利的',
@@ -509,8 +509,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_27.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'zoomIn',
+    animateOut: 'fadeOut'
   },
   des: {
     value: '看来妈妈们还聊得挺好么，嘻嘻',
@@ -520,8 +520,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_28.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'rotateIn',
+    animateOut: 'zoomOut'
   },
   des: {
     value: '这是一个丰收的季节，我们也将收获甜蜜的爱情啦',
@@ -541,8 +541,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_29.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'flipInY',
+    animateOut: 'fadeOut'
   },
   des: {
     value: '第一次两家人一起照了全家福：）',
@@ -563,7 +563,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_30.jpg'),
     animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateOut: 'fadeOut'
   },
   des: {
     value: '这次我们一起去海南玩啦，穿得蛮有味么？',
@@ -583,8 +583,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_31.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'zoomIn',
+    animateOut: 'zoomOut'
   },
   des: {
     value: '这么文艺的女生是谁？恩，这是我的lovely girl啦~',
@@ -594,8 +594,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_32.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'rotateIn',
+    animateOut: 'rotateOut'
   },
   des: {
     value: '海是你的背景，美丽是你的笑容：）',
@@ -615,7 +615,7 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_33.jpg'),
-    animateIn: 'fadeIn',
+    animateIn: 'flipInY',
     animateOut: 'flipOutY'
   },
   des: {
@@ -637,7 +637,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_34.jpg'),
     animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateOut: 'zoomOut'
   },
   des: {
     value: '玩得蛮开心么~',
@@ -657,8 +657,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_35.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'zoomIn',
+    animateOut: 'rotateOut'
   },
   des: {
     value: '花美还是我美？当然是花...里面的人美啦，嘻嘻',
@@ -668,7 +668,7 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_36.jpg'),
-    animateIn: 'fadeIn',
+    animateIn: 'rotateIn',
     animateOut: 'flipOutY'
   },
   des: {
@@ -689,8 +689,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_40.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'flipInY',
+    animateOut: 'fadeOut'
   },
   des: {
     value: '等等，这是谁拍的，感觉画风有点辣眼睛- -!',
@@ -711,7 +711,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_41.jpg'),
     animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateOut: 'rotateOut'
   },
   des: {
     value: '浪漫温馨岛，美人鱼小姐玩得还开心不？',
@@ -731,7 +731,7 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_42.jpg'),
-    animateIn: 'fadeIn',
+    animateIn: 'zoomIn',
     animateOut: 'flipOutY'
   },
   des: {
@@ -742,8 +742,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_43.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'rotateIn',
+    animateOut: 'fadeOut'
   },
   des: {
     value: '那我们一起去白云山赏花吧~',
@@ -763,8 +763,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_44.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'flipInY',
+    animateOut: 'rotateOut'
   },
   des: {
     value: '走累啦，休息一下呗，老婆也来坐一下吧：）',
@@ -775,7 +775,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_45.jpg'),
     animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateOut: 'rotateOut'
   },
   des: {
     value: '老婆是美女好处多，腰不酸了，腿不痛了，嘿嘿',
@@ -795,8 +795,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_46.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'zoomIn',
+    animateOut: 'fadeOut'
   },
   des: {
     value: '老婆说，我也来演奏一曲呗，这是吹...笛子吗？',
@@ -816,8 +816,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_47.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'rotateIn',
+    animateOut: 'zoomOut'
   },
   des: {
     value: '来来来，跟大圣合个影，嘻嘻',
@@ -828,7 +828,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_48.jpg'),
     animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateOut: 'fadeOut'
   },
   des: {
     value: '这是我们第一次出国，泰国的双龙寺~~',
@@ -838,8 +838,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_49.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'zoomIn',
+    animateOut: 'zoomOut'
   },
   des: {
     value: '大树秋千，先拍个美照压压惊~',
@@ -859,8 +859,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_50.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'rotateIn',
+    animateOut: 'rotateOut'
   },
   des: {
     value: '这是黄房子吗？<br/>秀恩爱无所不在，秀出国际新高度啦',
@@ -880,7 +880,7 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_52.jpg'),
-    animateIn: 'fadeIn',
+    animateIn: 'flipInY',
     animateOut: 'flipOutY'
   },
   des: {
@@ -892,7 +892,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_53.jpg'),
     animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateOut: 'zoomOut'
   },
   des: {
     value: '卖个萌，耍个呆，美美哒，么么哒~~',
@@ -912,8 +912,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_54.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'flipOutY'
+    animateIn: 'zoomIn',
+    animateOut: 'rotateOut'
   },
   des: {
     value: '希望以后的每一次重要时刻都有你相伴<br/>情人节快乐！爱你到永远老婆！',
