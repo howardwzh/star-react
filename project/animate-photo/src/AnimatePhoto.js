@@ -67,13 +67,13 @@ class AnimatePhoto extends Component {
         return <img key={j} src={p.value} style={ pdtStyle } className={ pdtAnimateClass + ' animated' } alt="" />
       })
       // 返回节点内容
-      return (
-        <div key={i} className={'scene ' + hideClass}>
-          <div className={picAnimateClass + ' board animated'} style={{ backgroundImage: 'url(' + v.pic.value + ')' }}></div>
-          <h5 className={desAnimateClass + ' animated'} style={ desStyle } dangerouslySetInnerHTML={{__html: v.des.value}}></h5>
-          { pdtElements }
-        </div>
-      )
+      return <div key={i} className={"scene " + hideClass}>
+          <div className={picAnimateClass + " board animated"}>
+            <div className="board-photo" style={{ backgroundImage: "url(" + v.pic.value + ")" }} />
+          </div>
+          <h5 className={desAnimateClass + " animated"} style={desStyle} dangerouslySetInnerHTML={{ __html: v.des.value }} />
+          {pdtElements}
+        </div>;
     })
     return (
       <div className="animate-photo">
