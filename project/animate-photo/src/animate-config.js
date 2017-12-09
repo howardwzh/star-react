@@ -455,7 +455,7 @@ const data = [{
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_25_1.jpg'),
+    value: require('./images/photos/photo_luck_26.jpg'),
     animateIn: 'rotateIn',
     animateOut: 'fadeOut'
   },
@@ -476,7 +476,7 @@ const data = [{
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_26.jpg'),
+    value: require('./images/photos/photo_luck_27.jpg'),
     animateIn: 'flipInY',
     animateOut: 'rotateOut'
   },
@@ -487,7 +487,7 @@ const data = [{
   }
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_26_1.jpg'),
+    value: require('./images/photos/photo_luck_28.jpg'),
     animateIn: 'fadeIn',
     animateOut: 'rotateOut'
   },
@@ -508,7 +508,7 @@ const data = [{
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_27.jpg'),
+    value: require('./images/photos/photo_luck_29.jpg'),
     animateIn: 'zoomIn',
     animateOut: 'fadeOut'
   },
@@ -519,7 +519,7 @@ const data = [{
   }
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_28.jpg'),
+    value: require('./images/photos/photo_luck_30.jpg'),
     animateIn: 'rotateIn',
     animateOut: 'zoomOut'
   },
@@ -540,7 +540,7 @@ const data = [{
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_29.jpg'),
+    value: require('./images/photos/photo_luck_31.jpg'),
     animateIn: 'flipInY',
     animateOut: 'fadeOut'
   },
@@ -561,7 +561,7 @@ const data = [{
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_30.jpg'),
+    value: require('./images/photos/photo_luck_32.jpg'),
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
@@ -582,7 +582,7 @@ const data = [{
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_31.jpg'),
+    value: require('./images/photos/photo_luck_33.jpg'),
     animateIn: 'zoomIn',
     animateOut: 'zoomOut'
   },
@@ -593,7 +593,7 @@ const data = [{
   }
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_32.jpg'),
+    value: require('./images/photos/photo_luck_34.jpg'),
     animateIn: 'rotateIn',
     animateOut: 'rotateOut'
   },
@@ -614,7 +614,7 @@ const data = [{
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_33.jpg'),
+    value: require('./images/photos/photo_luck_35.jpg'),
     animateIn: 'flipInY',
     animateOut: 'flipOutY'
   },
@@ -635,7 +635,7 @@ const data = [{
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_34.jpg'),
+    value: require('./images/photos/photo_luck_36.jpg'),
     animateIn: 'fadeIn',
     animateOut: 'zoomOut'
   },
@@ -656,7 +656,7 @@ const data = [{
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_35.jpg'),
+    value: require('./images/photos/photo_luck_37.jpg'),
     animateIn: 'zoomIn',
     animateOut: 'rotateOut'
   },
@@ -665,271 +665,6 @@ const data = [{
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   }
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_36.jpg'),
-    animateIn: 'rotateIn',
-    animateOut: 'flipOutY'
-  },
-  des: {
-    value: '大眼睛美女，你也是一条鱼吗？美人...鱼~~',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt33.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '46%',
-      top: '64%',
-      width: '50%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_40.jpg'),
-    animateIn: 'flipInY',
-    animateOut: 'fadeOut'
-  },
-  des: {
-    value: '等等，这是谁拍的，感觉画风有点辣眼睛- -!',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt34.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '62%',
-      top: '68%',
-      width: '37%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_41.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'rotateOut'
-  },
-  des: {
-    value: '浪漫温馨岛，美人鱼小姐玩得还开心不？',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt5.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '31%',
-      top: '45%',
-      width: '67%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_42.jpg'),
-    animateIn: 'zoomIn',
-    animateOut: 'flipOutY'
-  },
-  des: {
-    value: '今天去哪里玩呢？',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  }
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_43.jpg'),
-    animateIn: 'rotateIn',
-    animateOut: 'fadeOut'
-  },
-  des: {
-    value: '那我们一起去白云山赏花吧~',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt21.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '64%',
-      top: '2%',
-      width: '32%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_44.jpg'),
-    animateIn: 'flipInY',
-    animateOut: 'rotateOut'
-  },
-  des: {
-    value: '走累啦，休息一下呗，老婆也来坐一下吧：）',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  }
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_45.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'rotateOut'
-  },
-  des: {
-    value: '老婆是美女好处多，腰不酸了，腿不痛了，嘿嘿',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt35.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '43%',
-      top: '67%',
-      width: '54%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_46.jpg'),
-    animateIn: 'zoomIn',
-    animateOut: 'fadeOut'
-  },
-  des: {
-    value: '老婆说，我也来演奏一曲呗，这是吹...笛子吗？',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt4.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '75%',
-      top: '60%',
-      width: '26%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_47.jpg'),
-    animateIn: 'rotateIn',
-    animateOut: 'zoomOut'
-  },
-  des: {
-    value: '来来来，跟大圣合个影，嘻嘻',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  }
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_48.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  des: {
-    value: '这是我们第一次出国，泰国的双龙寺~~',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  }
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_49.jpg'),
-    animateIn: 'zoomIn',
-    animateOut: 'zoomOut'
-  },
-  des: {
-    value: '大树秋千，先拍个美照压压惊~',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt31.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '67%',
-      top: '5%',
-      width: '33%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_50.jpg'),
-    animateIn: 'rotateIn',
-    animateOut: 'rotateOut'
-  },
-  des: {
-    value: '这是黄房子吗？<br/>秀恩爱无所不在，秀出国际新高度啦',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt26.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '5%',
-      top: '1%',
-      width: '48%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_52.jpg'),
-    animateIn: 'flipInY',
-    animateOut: 'flipOutY'
-  },
-  des: {
-    value: '这是我们家的邻家女孩 ^_^',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  }
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_53.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'zoomOut'
-  },
-  des: {
-    value: '卖个萌，耍个呆，美美哒，么么哒~~',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt14.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '8%',
-      top: '3%',
-      width: '72%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_54.jpg'),
-    animateIn: 'zoomIn',
-    animateOut: 'rotateOut'
-  },
-  des: {
-    value: '希望以后的每一次重要时刻都有你相伴<br/>情人节快乐！爱你到永远老婆！',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt22.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '28%',
-      top: '58%',
-      width: '53%'
-    }
-  }]
 }]
 
 export default data
