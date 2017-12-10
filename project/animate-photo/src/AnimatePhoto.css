@@ -35,7 +35,7 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: cover;
-  animation: animatedBackground 10s linear;
+  animation: animatedBackground 10s linear infinite;
 }
 .scene h5 {
   position: absolute;
@@ -50,7 +50,6 @@
 }
 .scene img {
   position: absolute;
-  width: 10%;
   margin: 0;
 }
 .animated {

@@ -14,7 +14,7 @@ const data = [{
     animateIn: 'fadeIn',
     animateOut: 'fadeOut',
     style: {
-      width: '35%',
+      maxWidth: '35%',
       top: '57%',
       left: '30%'
     }
@@ -80,7 +80,7 @@ const data = [{
     style: {
       right: '10%',
       bottom: '40%',
-      width: '50%'
+      maxWidth: '50%'
     }
   }]
 }, {
@@ -101,7 +101,7 @@ const data = [{
     style: {
       left: '43%',
       top: '36%',
-      width: '20%'
+      maxWidth: '20%'
     }
   }]
 }, {
@@ -122,7 +122,7 @@ const data = [{
     style: {
       left: '75%',
       top: '11%',
-      width: '20%'
+      maxWidth: '20%'
     }
   }]
 }, {
@@ -143,7 +143,7 @@ const data = [{
     style: {
       left: '6%',
       top: '15%',
-      width: '15%'
+      maxWidth: '15%'
     }
   }]
 }, {
@@ -175,7 +175,7 @@ const data = [{
     style: {
       left: '0',
       top: '43%',
-      width: '100%'
+      maxWidth: '100%'
     }
   }]
 }, {
@@ -196,7 +196,7 @@ const data = [{
     style: {
       left: '10%',
       top: '56%',
-      width: '50%'
+      maxWidth: '50%'
     }
   }]
 }, {
@@ -217,7 +217,7 @@ const data = [{
     style: {
       left: '75%',
       top: '51%',
-      width: '20%'
+      maxWidth: '20%'
     }
   }]
 }, {
@@ -238,7 +238,7 @@ const data = [{
     style: {
       left: '10%',
       top: '0',
-      width: '80%'
+      maxWidth: '80%'
     }
   }]
 }, {
@@ -259,7 +259,7 @@ const data = [{
     style: {
       left: '66%',
       top: '70%',
-      width: '30%'
+      maxWidth: '30%'
     }
   }]
 }, {
@@ -280,7 +280,7 @@ const data = [{
     style: {
       left: '3%',
       top: '45%',
-      width: '45%'
+      maxWidth: '45%'
     }
   }]
 }, {
@@ -301,7 +301,7 @@ const data = [{
     style: {
       left: '25%',
       top: '56%',
-      width: '54%'
+      maxWidth: '54%'
     }
   }]
 }, {
@@ -322,7 +322,7 @@ const data = [{
     style: {
       left: '14%',
       top: '-2%',
-      width: '24%'
+      maxWidth: '24%'
     }
   }]
 }, {
@@ -343,7 +343,7 @@ const data = [{
     style: {
       left: '44%',
       top: '56%',
-      width: '60%'
+      maxWidth: '60%'
     }
   }]
 }, {
@@ -375,7 +375,7 @@ const data = [{
     style: {
       left: '66%',
       top: '72%',
-      width: '30%'
+      maxWidth: '30%'
     }
   }]
 }, {
@@ -418,7 +418,7 @@ const data = [{
     style: {
       left: '2%',
       top: '21%',
-      width: '44%'
+      maxWidth: '44%'
     }
   }]
 }, {
@@ -450,7 +450,7 @@ const data = [{
     style: {
       left: '74%',
       top: '47%',
-      width: '24%'
+      maxWidth: '24%'
     }
   }]
 }, {
@@ -471,7 +471,7 @@ const data = [{
     style: {
       left: '3%',
       top: '59%',
-      width: '72%'
+      maxWidth: '72%'
     }
   }]
 }, {
@@ -503,7 +503,7 @@ const data = [{
     style: {
       left: '26%',
       top: '59%',
-      width: '54%'
+      maxWidth: '54%'
     }
   }]
 }, {
@@ -535,7 +535,7 @@ const data = [{
     style: {
       left: '26%',
       top: '59%',
-      width: '54%'
+      maxWidth: '54%'
     }
   }]
 }, {
@@ -556,7 +556,7 @@ const data = [{
     style: {
       left: '33%',
       top: '-2%',
-      width: '36%'
+      maxWidth: '36%'
     }
   }]
 }, {
@@ -577,7 +577,7 @@ const data = [{
     style: {
       left: '62%',
       top: '68%',
-      width: '36%'
+      maxWidth: '36%'
     }
   }]
 }, {
@@ -609,7 +609,7 @@ const data = [{
     style: {
       left: '57%',
       top: '3%',
-      width: '36%'
+      maxWidth: '36%'
     }
   }]
 }, {
@@ -630,7 +630,7 @@ const data = [{
     style: {
       left: '40%',
       top: '71%',
-      width: '58%'
+      maxWidth: '58%'
     }
   }]
 }, {
@@ -651,7 +651,7 @@ const data = [{
     style: {
       left: '49%',
       top: '58%',
-      width: '50%'
+      maxWidth: '50%'
     }
   }]
 }, {
