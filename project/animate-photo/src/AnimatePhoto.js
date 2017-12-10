@@ -90,7 +90,7 @@ class AnimatePhoto extends Component {
         currentIndex: self.state.nextIndex,
         nextIndex: ((self.state.nextIndex + 1) % self.state.totle)
       })
-    }, 5000)
+    }, 9000)
   }
 }
 
