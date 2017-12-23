@@ -5,7 +5,7 @@ const data = [{
     animateOut: 'fadeOut'
   },
   des: {
-    value: '第一次合照时的紧张',
+    value: '春暖花开的日子，我们一起又去西安市轧马路，鲜花作为背景，我们一起拍了合照',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
@@ -15,8 +15,8 @@ const data = [{
     animateOut: 'fadeOut',
     style: {
       maxWidth: '35%',
-      top: '57%',
-      left: '30%'
+      top: '0',
+      left: '5%'
     }
   }]
 }, {
@@ -26,7 +26,7 @@ const data = [{
     animateOut: 'zoomOut'
   },
   des: {
-    value: '狗狗好像很听话哟！~',
+    value: '再美的景，也没有景中的人美，哈哈，你懂的，老汪最喜欢你那阳光灿烂可爱的笑容，所以，要一直保持哦！',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   }
@@ -37,7 +37,28 @@ const data = [{
     animateOut: 'rotateOut'
   },
   des: {
-    value: '不约而同的回眸：）',
+    value: '难道这是西安形象大使吗？广告做的杠杠的哟~',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  },
+  pdt: [{
+    value: require('./images/pendants/pdt35.gif'),
+    animateIn: 'slideInDown',
+    animateOut: 'slideOutUp',
+    style: {
+      left: '0',
+      bottom: '10%',
+      maxWidth: '35%'
+    }
+  }]
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_4.jpg'),
+    animateIn: 'rotateIn',
+    animateOut: 'rotateOut'
+  },
+  des: {
+    value: '那时的我，胖胖的，你看那圆圆的小肚子，嘻嘻。西安市的夜景很美，但最让人刻骨铭心的是我们之间最真挚的友谊之情。',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
@@ -53,23 +74,23 @@ const data = [{
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_4.jpg'),
+    value: require('./images/photos/photo_luck_5.jpg'),
     animateIn: 'flipInY',
     animateOut: 'flipOutY'
   },
   des: {
-    value: '松山湖我来了，瘦瘦的我也想追求自己的幸福',
+    value: '赶上西安市园艺博览会，拍照背景很丰富哟，夜光下的小女人，哎哟，看看不错哦！',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   }
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_5.jpg'),
+    value: require('./images/photos/photo_luck_6.jpg'),
     animateIn: 'fadeIn',
     animateOut: 'zoomOut'
   },
   des: {
-    value: '美丽的女孩，什么时候能紧紧握住你的手呢？',
+    value: '早就听说西安市回民街是集聚美食之地，我们两个吃货，已经馋了很久了，这次下山决定要大吃一场。',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
@@ -78,293 +99,19 @@ const data = [{
     animateIn: 'slideInRight',
     animateOut: 'slideOutRight',
     style: {
-      right: '10%',
-      bottom: '40%',
+      right: '2%',
+      bottom: '12%',
       maxWidth: '50%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_6.jpg'),
-    animateIn: 'zoomIn',
-    animateOut: 'rotateOut'
-  },
-  des: {
-    value: '感谢上天，我们终于画了我们自己的爱情之心啦',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt9.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '43%',
-      top: '36%',
-      maxWidth: '20%'
     }
   }]
 }, {
   pic: {
     value: require('./images/photos/photo_luck_7.jpg'),
-    animateIn: 'rotateIn',
-    animateOut: 'flipOutY'
-  },
-  des: {
-    value: '紧紧握着你的手，不想放开怎么办，嘻嘻',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt2.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '75%',
-      top: '11%',
-      maxWidth: '20%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_8.jpg'),
-    animateIn: 'flipInY',
-    animateOut: 'fadeOut'
-  },
-  des: {
-    value: '珠海玩得开心不？',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt6.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '6%',
-      top: '15%',
-      maxWidth: '15%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_9.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'rotateOut'
-  },
-  des: {
-    value: '当时找了好久，终于买到了一束花<br/>希望心上人能喜欢哟~',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  }
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_10.jpg'),
     animateIn: 'zoomIn',
-    animateOut: 'flipOutY'
-  },
-  des: {
-    value: '后来和爸妈见第一次面，在白云山玩得很开心~',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt11.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '0',
-      top: '43%',
-      maxWidth: '100%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_11.jpg'),
-    animateIn: 'rotateIn',
-    animateOut: 'fadeOut'
-  },
-  des: {
-    value: '笑得好开心，喜欢你天真浪漫的样子~',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt29.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '10%',
-      top: '56%',
-      maxWidth: '50%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_12.jpg'),
-    animateIn: 'flipInY',
     animateOut: 'rotateOut'
   },
   des: {
-    value: '终于爬到山顶啦，照张相留下幸福的一刻~',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt10.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '75%',
-      top: '51%',
-      maxWidth: '20%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_13.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'rotateOut'
-  },
-  des: {
-    value: '嘻嘻，秀秀情侣对戒，呛是蛮般配啦：）',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt25.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '10%',
-      top: '0',
-      maxWidth: '80%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_14.jpg'),
-    animateIn: 'zoomIn',
-    animateOut: 'fadeOut'
-  },
-  des: {
-    value: '这次我们去大夫山玩，调皮的摆个造型咯，哈哈',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt28.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '66%',
-      top: '70%',
-      maxWidth: '30%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_15.jpg'),
-    animateIn: 'rotateIn',
-    animateOut: 'zoomOut'
-  },
-  des: {
-    value: '这pose玩得666，想来个回马枪不？',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt23.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '3%',
-      top: '45%',
-      maxWidth: '45%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_16.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  des: {
-    value: '出来“混的”，早晚要在一起不，亲爱的以后咱们一起闯荡吧~',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt28.gif_s400x0'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '25%',
-      top: '56%',
-      maxWidth: '54%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_17.jpg'),
-    animateIn: 'zoomIn',
-    animateOut: 'zoomOut'
-  },
-  des: {
-    value: '嘻嘻，抱得美人归，夫复何求呢？',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt9.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '14%',
-      top: '-2%',
-      maxWidth: '24%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_18.jpg'),
-    animateIn: 'rotateIn',
-    animateOut: 'rotateOut'
-  },
-  des: {
-    value: '第一次跟亲爱的回卷桥，感觉好紧张哟~',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt3.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '44%',
-      top: '56%',
-      maxWidth: '60%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_19.jpg'),
-    animateIn: 'flipInY',
-    animateOut: 'flipOutY'
-  },
-  des: {
-    value: '那时候的柴房还没折，想来一定在红儿很小的时候就存在了吧？',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  }
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_20.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'zoomOut'
-  },
-  des: {
-    value: '第一次看到那么多桔子，有口福啦，嘿嘿~',
+    value: '这小妞在吃什么，吃的真香呀！看的我忍不住拍下你的吃相，哈哈，留作记念。',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
@@ -373,94 +120,362 @@ const data = [{
     animateIn: 'fadeIn',
     animateOut: 'fadeOut',
     style: {
-      left: '66%',
-      top: '72%',
+      right: '5%',
+      bottom: '12%',
       maxWidth: '30%'
     }
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_21.jpg'),
-    animateIn: 'zoomIn',
-    animateOut: 'rotateOut'
+    value: require('./images/photos/photo_luck_8.jpg'),
+    animateIn: 'rotateIn',
+    animateOut: 'flipOutY'
   },
   des: {
-    value: '观音山我们来啦，谢谢老天让我跟美丽的红儿在这茫茫人海中相遇：）',
+    value: '那年冬天，老汪给你过生日，烛光映照着小寿星，画面不要太美哟，让人情不自禁的想起。',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  },
+  pdt: [{
+    value: require('./images/pendants/pdt2.gif'),
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    style: {
+      right: '2%',
+      top: '11%',
+      maxWidth: '20%'
+    }
+  }]
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_9.jpg'),
+    animateIn: 'flipInY',
+    animateOut: 'fadeOut'
+  },
+  des: {
+    value: '烛光，彩带，气球，仿佛房间中弥漫着浪漫的味道，老汪第一次装扮这样的场景，好像第一次还挺成功的耶！^_^',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   }
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_22.jpg'),
-    animateIn: 'rotateIn',
+    value: require('./images/photos/photo_luck_10.jpg'),
+    animateIn: 'fadeIn',
+    animateOut: 'rotateOut'
+  },
+  des: {
+    value: '还记得那天我们都特开心，还喝起了交杯酒，哎哟，这场面不要太恩爱哦！^ 3 ^',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+    },
+    pdt: [{
+      value: require('./images/pendants/pdt34.gif'),
+      animateIn: 'fadeIn',
+      animateOut: 'fadeOut',
+      style: {
+        right: '2%',
+        bottom: '13%',
+        maxWidth: '100%'
+      }
+    }]
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_11.jpg'),
+    animateIn: 'zoomIn',
     animateOut: 'flipOutY'
   },
   des: {
-    value: '开心的摆个V，感谢有你，缘分是不经意的留意，而你也是如此，多么的奇妙呢~',
+    value: '围上你的围巾美美哒，装起了文艺范！o(n_n)o',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  },
+  pdt: [{
+    value: require('./images/pendants/pdt11.gif'),
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    style: {
+      bottom: '0',
+      left: '0',
+      width: '100%'
+    }
+  }]
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_12.jpg'),
+    animateIn: 'rotateIn',
+    animateOut: 'fadeOut'
+  },
+  des: {
+    value: '那一年夏天，阳光明媚，我们一起去郊游，每一次和你一起，老汪都玩的很Happy~',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  },
+  pdt: [{
+    value: require('./images/pendants/pdt29.gif'),
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    style: {
+      left: '0',
+      top: '0',
+      maxWidth: '50%'
+    }
+  }]
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_13.jpg'),
+    animateIn: 'flipInY',
+    animateOut: 'rotateOut'
+  },
+  des: {
+    value: '光着脚丫子，戏水玩的真high呀，石头上坐着也蛮舒服的嘛！',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  },
+  pdt: [{
+    value: require('./images/pendants/pdt10.gif'),
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    style: {
+      right: '5%',
+      bottom: '8%',
+      maxWidth: '16%'
+    }
+  }]
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_14.jpg'),
+    animateIn: 'fadeIn',
+    animateOut: 'rotateOut'
+  },
+  des: {
+    value: '老汪就喜欢拍美女，看美女养眼哦！( ＠^^＠) ',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  },
+  pdt: [{
+    value: require('./images/pendants/pdt31.gif'),
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    style: {
+      right: '1%',
+      bottom: '11%',
+      maxWidth: '70%'
+    }
+  }]
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_15.jpg'),
+    animateIn: 'zoomIn',
+    animateOut: 'fadeOut'
+  },
+  des: {
+    value: '打赤脚像是蛮舒服哟，好白的脚丫子呀(*^〔^*)',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  },
+  pdt: [{
+    value: require('./images/pendants/pdt28.gif'),
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    style: {
+      left: '2%',
+      bottom: '12%',
+      maxWidth: '30%'
+    }
+  }]
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_16.jpg'),
+    animateIn: 'rotateIn',
+    animateOut: 'zoomOut'
+  },
+  des: {
+    value: '我们又过了一个难忘的端午，虽然时间已经过去了很久，但有照片为我们作证，那份浓浓的情谊永远放在彼此的心里！照片让我们的笑容成为了永恒。(*^‧^*)',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  }
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_17.jpg'),
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  },
+  des: {
+    value: '在老大家里，我们一起犯傻，犯二~',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  },
+  pdt: [{
+    value: require('./images/pendants/pdt28.gif_s400x0'),
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    style: {
+      left: '6%',
+      top: '-3%',
+      maxWidth: '40%'
+    }
+  }]
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_18.jpg'),
+    animateIn: 'zoomIn',
+    animateOut: 'zoomOut'
+  },
+  des: {
+    value: '哇噻，全吃光光啦，吃饱喝足＼( ^▽^ )／',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  },
+  pdt: [{
+    value: require('./images/pendants/pdt26.gif'),
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    style: {
+      left: '14%',
+      bottom: '10%',
+      maxWidth: '50%'
+    }
+  }]
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_19.jpg'),
+    animateIn: 'rotateIn',
+    animateOut: 'rotateOut'
+  },
+  des: {
+    value: '哎哟，开心的日子，这两人又喝起来了交杯酒，有模有样，看着像那么回事哦！哈哈，这个时候，你是不是想打我呀！(＝^ω^＝)',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  },
+  pdt: [{
+    value: require('./images/pendants/pdt32.gif'),
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    style: {
+      right: '1%',
+      top: '1%',
+      maxWidth: '60%'
+    }
+  }]
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_20.jpg'),
+    animateIn: 'flipInY',
+    animateOut: 'flipOutY'
+  },
+  des: {
+    value: '好亲密的两姐妹(○^～^○)',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+    },
+    pdt: [{
+      value: require('./images/pendants/pdt14.gif'),
+      animateIn: 'fadeIn',
+      animateOut: 'fadeOut',
+      style: {
+        left: '2%',
+        bottom: '11%',
+        maxWidth: '60%'
+      }
+    }]
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_21.jpg'),
+    animateIn: 'fadeIn',
+    animateOut: 'zoomOut'
+  },
+  des: {
+    value: '我偷偷拿走你手机屏保的照片，因为实在太美啦~',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  },
+  pdt: [{
+    value: require('./images/pendants/pdt20.gif'),
+    animateIn: 'slideInDown',
+    animateOut: 'slideOutUp',
+    style: {
+      left: '0',
+      top: '0',
+      width: '100%',
+      opacity: '0.5'
+    }
+  }]
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_22.jpg'),
+    animateIn: 'zoomIn',
+    animateOut: 'rotateOut'
+  },
+  des: {
+    value: 'xxxxxxxxxxxxx',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   }
 }, {
   pic: {
     value: require('./images/photos/photo_luck_23.jpg'),
-    animateIn: 'flipInY',
-    animateOut: 'fadeOut'
+    animateIn: 'rotateIn',
+    animateOut: 'flipOutY'
   },
   des: {
-    value: '巧遇送子观音，嘻嘻~',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt19.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '2%',
-      top: '21%',
-      maxWidth: '44%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_24.jpg'),
-    animateIn: 'fadeIn',
-    animateOut: 'rotateOut'
-  },
-  des: {
-    value: '拜一拜，要诚心诚意，这样才灵验么：）',
+    value: '还记得我们第一次去唱K，两个麦霸唱到大半夜~',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   }
 }, {
   pic: {
+    value: require('./images/photos/photo_luck_24.jpg'),
+    animateIn: 'flipInY',
+    animateOut: 'fadeOut'
+  },
+  des: {
+    value: '平安夜送给你的苹果，当时还笑老汪做的苹果真丑，但心是甜的~(￣ε ￣)',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    style: {
+      bottom: '16%'
+    }
+  }
+}, {
+  pic: {
     value: require('./images/photos/photo_luck_25.jpg'),
+    animateIn: 'fadeIn',
+    animateOut: 'rotateOut'
+  },
+  des: {
+    value: '圣诞节我们在充满艺术细胞的小木屋拍照~',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  }
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_26.jpg'),
     animateIn: 'zoomIn',
     animateOut: 'flipOutY'
   },
   des: {
-    value: '下山时还不觉得累，开心的跳上跳下哟',
+    value: '我带上王哥下江南来看你啦~',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
   pdt: [{
-    value: require('./images/pendants/pdt9.gif'),
+    value: require('./images/pendants/pdt15.gif'),
     animateIn: 'fadeIn',
     animateOut: 'fadeOut',
     style: {
-      left: '74%',
-      top: '47%',
-      maxWidth: '24%'
+      left: '10%',
+      top: '0',
+      maxWidth: '60%'
     }
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_26.jpg'),
+    value: require('./images/photos/photo_luck_27.jpg'),
     animateIn: 'rotateIn',
     animateOut: 'fadeOut'
   },
   des: {
-    value: '第一次坐飞机，而且是跟心爱的姑娘一起哟',
+    value: '第一次见到传说中的华哥，我们还一起去看杭州特产，谢谢你们送的好多好吃的手信哟\^o^/',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
@@ -469,62 +484,52 @@ const data = [{
     animateIn: 'fadeIn',
     animateOut: 'fadeOut',
     style: {
-      left: '3%',
-      top: '59%',
-      maxWidth: '72%'
+      left: '10%',
+      top: '10%',
+      maxWidth: '42%'
     }
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_27.jpg'),
+    value: require('./images/photos/photo_luck_28.jpg'),
     animateIn: 'flipInY',
     animateOut: 'rotateOut'
   },
   des: {
-    value: '上海的东方之珠，是你喜欢的建筑啦',
+    value: '王哥拍下了我们的背影，毕业之后，我们一起玩耍的时间真少，每一次相聚虽然很短暂，但老汪都十分珍惜！',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   }
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_28.jpg'),
+    value: require('./images/photos/photo_luck_29.jpg'),
     animateIn: 'fadeIn',
     animateOut: 'rotateOut'
   },
   des: {
-    value: '我们的爸妈终于也要见面了，当时希望一切都顺顺利利的',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt17.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '26%',
-      top: '59%',
-      maxWidth: '54%'
-    }
-  }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_29.jpg'),
-    animateIn: 'zoomIn',
-    animateOut: 'fadeOut'
-  },
-  des: {
-    value: '看来妈妈们还聊得挺好么，嘻嘻',
+    value: '前年冬天，你来见证我的幸福，老汪心里十分的感动与开心！',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   }
 }, {
   pic: {
     value: require('./images/photos/photo_luck_30.jpg'),
+    animateIn: 'zoomIn',
+    animateOut: 'fadeOut'
+  },
+  des: {
+    value: '看着你们一起欢乐的闹门，老汪心里美滋滋的！',
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+  }
+}, {
+  pic: {
+    value: require('./images/photos/photo_luck_31.jpg'),
     animateIn: 'rotateIn',
     animateOut: 'zoomOut'
   },
   des: {
-    value: '这是一个丰收的季节，我们也将收获甜蜜的爱情啦',
+    value: '我们一起分享着幸福与欢乐！',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
@@ -540,12 +545,12 @@ const data = [{
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_31.jpg'),
+    value: require('./images/photos/photo_luck_32.jpg'),
     animateIn: 'flipInY',
     animateOut: 'fadeOut'
   },
   des: {
-    value: '第一次两家人一起照了全家福：）',
+    value: '我们一起举杯庆祝我与你王哥喜结连理，我们都露出了可爱的小酒窝',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
@@ -561,12 +566,12 @@ const data = [{
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_32.jpg'),
+    value: require('./images/photos/photo_luck_33.jpg'),
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
   des: {
-    value: '这次我们一起去海南玩啦，穿得蛮有味么？',
+    value: '你也找到属于你的幸福，老汪真替你高兴！',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
@@ -582,23 +587,23 @@ const data = [{
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_33.jpg'),
+    value: require('./images/photos/photo_luck_34.jpg'),
     animateIn: 'zoomIn',
     animateOut: 'zoomOut'
   },
   des: {
-    value: '这么文艺的女生是谁？恩，这是我的lovely girl啦~',
+    value: '婚纱照拍的很美哟，俩人看着蛮有夫妻相的嘛！嘻嘻！~',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   }
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_34.jpg'),
+    value: require('./images/photos/photo_luck_35.jpg'),
     animateIn: 'rotateIn',
     animateOut: 'rotateOut'
   },
   des: {
-    value: '海是你的背景，美丽是你的笑容：）',
+    value: '夕阳无限美，',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
@@ -614,12 +619,12 @@ const data = [{
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_35.jpg'),
+    value: require('./images/photos/photo_luck_36.jpg'),
     animateIn: 'flipInY',
     animateOut: 'flipOutY'
   },
   des: {
-    value: '摇啊摇，摇到外婆桥，摆得蛮舒服啦',
+    value: 'xxxxxxxxxxxxxxxxxxx',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
@@ -635,12 +640,12 @@ const data = [{
   }]
 }, {
   pic: {
-    value: require('./images/photos/photo_luck_36.jpg'),
+    value: require('./images/photos/photo_luck_37.jpg'),
     animateIn: 'fadeIn',
     animateOut: 'zoomOut'
   },
   des: {
-    value: '玩得蛮开心么~',
+    value: 'xxxxxxxxxxxxxxxxxxx~',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
@@ -654,17 +659,6 @@ const data = [{
       maxWidth: '50%'
     }
   }]
-}, {
-  pic: {
-    value: require('./images/photos/photo_luck_37.jpg'),
-    animateIn: 'zoomIn',
-    animateOut: 'rotateOut'
-  },
-  des: {
-    value: '花美还是我美？当然是花...里面的人美啦，嘻嘻',
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut'
-  }
 }]
 
 export default data
