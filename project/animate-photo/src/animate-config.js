@@ -75,8 +75,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_5.jpg'),
-    animateIn: 'flipInY',
-    animateOut: 'flipOutY'
+    animateIn: 'zoomIn',
+    animateOut: 'rotateOut'
   },
   des: {
     value: '赶上西安市园艺博览会，拍照背景很丰富哟，夜光下的小女人，哎哟，看看不错哦！',
@@ -129,7 +129,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_8.jpg'),
     animateIn: 'rotateIn',
-    animateOut: 'flipOutY'
+    animateOut: 'rotateOut'
   },
   des: {
     value: '那年冬天，老汪给你过生日，烛光映照着小寿星，画面不要太美哟，让人情不自禁的想起。',
@@ -149,7 +149,7 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_9.jpg'),
-    animateIn: 'flipInY',
+    animateIn: 'zoomIn',
     animateOut: 'fadeOut'
   },
   des: {
@@ -182,7 +182,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_11.jpg'),
     animateIn: 'zoomIn',
-    animateOut: 'flipOutY'
+    animateOut: 'rotateOut'
   },
   des: {
     value: '围上你的围巾美美哒，装起了文艺范！o(n_n)o',
@@ -223,7 +223,7 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_13.jpg'),
-    animateIn: 'flipInY',
+    animateIn: 'zoomIn',
     animateOut: 'rotateOut'
   },
   des: {
@@ -360,8 +360,8 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_20.jpg'),
-    animateIn: 'flipInY',
-    animateOut: 'flipOutY'
+    animateIn: 'zoomIn',
+    animateOut: 'rotateOut'
   },
   des: {
     value: '好亲密的两姐妹(○^～^○)',
@@ -407,7 +407,7 @@ const data = [{
     animateOut: 'rotateOut'
   },
   des: {
-    value: 'xxxxxxxxxxxxx',
+    value: '这些是你生活中的点点滴滴的，好漂漂哟~',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   }
@@ -415,7 +415,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_23.jpg'),
     animateIn: 'rotateIn',
-    animateOut: 'flipOutY'
+    animateOut: 'rotateOut'
   },
   des: {
     value: '还记得我们第一次去唱K，两个麦霸唱到大半夜~',
@@ -425,7 +425,7 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_24.jpg'),
-    animateIn: 'flipInY',
+    animateIn: 'zoomIn',
     animateOut: 'fadeOut'
   },
   des: {
@@ -451,7 +451,7 @@ const data = [{
   pic: {
     value: require('./images/photos/photo_luck_26.jpg'),
     animateIn: 'zoomIn',
-    animateOut: 'flipOutY'
+    animateOut: 'rotateOut'
   },
   des: {
     value: '我带上王哥下江南来看你啦~',
@@ -492,7 +492,7 @@ const data = [{
 }, {
   pic: {
     value: require('./images/photos/photo_luck_28.jpg'),
-    animateIn: 'flipInY',
+    animateIn: 'zoomIn',
     animateOut: 'rotateOut'
   },
   des: {
@@ -532,38 +532,18 @@ const data = [{
     value: '我们一起分享着幸福与欢乐！',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt22.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '26%',
-      top: '59%',
-      maxWidth: '54%'
-    }
-  }]
+  }
 }, {
   pic: {
     value: require('./images/photos/photo_luck_32.jpg'),
-    animateIn: 'flipInY',
+    animateIn: 'zoomIn',
     animateOut: 'fadeOut'
   },
   des: {
     value: '我们一起举杯庆祝我与你王哥喜结连理，我们都露出了可爱的小酒窝',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt1.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '33%',
-      top: '-2%',
-      maxWidth: '36%'
-    }
-  }]
+  }
 }, {
   pic: {
     value: require('./images/photos/photo_luck_33.jpg'),
@@ -603,28 +583,18 @@ const data = [{
     animateOut: 'rotateOut'
   },
   des: {
-    value: '夕阳无限美，',
+    value: '十年修得同船渡，百年修得共枕眠。于茫茫人海相遇的你们，是彼此的幸运，希望你们永远幸福快乐哟：） ',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt23.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '57%',
-      top: '3%',
-      maxWidth: '36%'
-    }
-  }]
+  }
 }, {
   pic: {
     value: require('./images/photos/photo_luck_36.jpg'),
-    animateIn: 'flipInY',
-    animateOut: 'flipOutY'
+    animateIn: 'zoomIn',
+    animateOut: 'rotateOut'
   },
   des: {
-    value: 'xxxxxxxxxxxxxxxxxxx',
+    value: '从你的笑容中，老汪知道小沈是个值得托付的人哟Y(^_^)Y',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
   },
@@ -633,8 +603,8 @@ const data = [{
     animateIn: 'fadeIn',
     animateOut: 'fadeOut',
     style: {
-      left: '40%',
-      top: '71%',
+      right: '2%',
+      bottom: '16%',
       maxWidth: '58%'
     }
   }]
@@ -645,20 +615,10 @@ const data = [{
     animateOut: 'zoomOut'
   },
   des: {
-    value: 'xxxxxxxxxxxxxxxxxxx~',
+    value: '大手拉小手，一起迈向幸福之路~',
     animateIn: 'fadeIn',
     animateOut: 'fadeOut'
-  },
-  pdt: [{
-    value: require('./images/pendants/pdt7.gif'),
-    animateIn: 'fadeIn',
-    animateOut: 'fadeOut',
-    style: {
-      left: '49%',
-      top: '58%',
-      maxWidth: '50%'
-    }
-  }]
+  }
 }]
 
 export default data

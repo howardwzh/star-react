@@ -15,7 +15,7 @@ class MusicPlayer extends Component {
       <div className="music-player">
         <ReactAudioPlayer
           src={require('./music.mp3')}
-          // autoPlay
+          autoPlay
           controls
           loop
           className="audio"

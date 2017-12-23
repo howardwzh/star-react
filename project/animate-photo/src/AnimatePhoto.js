@@ -10,10 +10,10 @@ class AnimatePhoto extends Component {
     super(props)
     this.state = {
       prevIndex: -1,
-      currentIndex: 34,
-      nextIndex: 9999,
-      totle: 1
-      // totle: this.props.data.length
+      currentIndex: 0,
+      nextIndex: 1,
+      // totle: 1
+      totle: this.props.data.length
     }
   }
 
