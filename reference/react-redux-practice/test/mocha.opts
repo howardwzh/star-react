@@ -1,3 +1,0 @@
---compilers jsx?:babel-register
---require test/bootstrap.js
-src/**/*.test.js

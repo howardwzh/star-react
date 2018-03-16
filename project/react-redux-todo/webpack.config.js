@@ -1,10 +1,15 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const path = require('path')
 
 const HtmlWebpackPluginIndexConfig = new HtmlWebpackPlugin({
   template: `${__dirname}/src/index.html`,
   filename: 'index.html',
   inject: 'body'
 })
+const CleanWebpackPluginConfig = new CleanWebpackPlugin(
+  path.resolve(__dirname, 'dist')
+)
 
 module.exports = {
   entry: {
@@ -41,6 +46,7 @@ module.exports = {
     port: 8010
   },
   plugins: [
+    CleanWebpackPluginConfig,
     HtmlWebpackPluginIndexConfig
   ]
 }
