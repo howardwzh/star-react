@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js run build
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js run dev
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/bin:/usr/local/opt/python@2/bin:/Users/zh/Library/Android/sdk/tools:/Users/zh/Library/Android/sdk/platform-tools
@@ -29,6 +29,7 @@ npm manifest:
       "babel-eslint": "^8.2.2",
       "babel-loader": "^7.1.4",
       "babel-preset-react": "^6.24.1",
+      "clean-webpack-plugin": "^0.1.19",
       "eslint": "^4.18.2",
       "eslint-loader": "^2.0.0",
       "html-loader": "^0.5.5",
@@ -1436,6 +1437,12 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.1.11.tgz#2ecdf145aba38f54740f26cefd0ff3e03e125d6a"
     dependencies:
       source-map "0.5.x"
+  
+  clean-webpack-plugin@^0.1.19:
+    version "0.1.19"
+    resolved "https://registry.yarnpkg.com/clean-webpack-plugin/-/clean-webpack-plugin-0.1.19.tgz#ceda8bb96b00fe168e9b080272960d20fdcadd6d"
+    dependencies:
+      rimraf "^2.6.1"
   
   cli-cursor@^1.0.2:
     version "1.0.2"
@@ -6440,7 +6447,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c webpack --mode production
+  Arguments: -c webpack-dev-server --mode development
   Directory: /Users/zh/Documents/study/star-react/project/react-redux-todo
   Output:
   

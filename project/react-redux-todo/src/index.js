@@ -6,6 +6,7 @@ import {Router, Route, hashHistory} from 'react-router'
 
 import App from './App'
 import Todo from './containers/Todo'
+import Home from './containers/Home'
 import todoApp from './reducers'
 
 let store = createStore(todoApp)
@@ -16,6 +17,7 @@ render(
     <Router history={hashHistory}>
       <Route path='/' component={App}>
         <Route path='todo' component={Todo}></Route>
+        <Route path='home' component={Home}></Route>
       </Route>
     </Router>
   </Provider>,
