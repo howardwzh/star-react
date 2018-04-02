@@ -4,12 +4,16 @@ import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import {Router, Route, hashHistory} from 'react-router'
 
+
 import App from './App'
 import Todo from './containers/Todo'
 import Home from './containers/Home'
-import todoApp from './reducers'
+import configureStore from './store/configureStore'
+import sagas from './sagas/index'
 
-let store = createStore(todoApp)
+let store = configureStore({})
+
+store.runSage(sagas)
 
 let rootElement = document.getElementById('root')
 render(

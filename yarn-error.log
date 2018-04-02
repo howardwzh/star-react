@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js run build
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js start
 
 PATH: 
-  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/bin:/usr/local/opt/python@2/bin:/Users/zh/Library/Android/sdk/tools:/Users/zh/Library/Android/sdk/platform-tools
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/bin:/usr/local/opt/python@2/bin:/Users/zh/Library/Android/sdk/tools:/Users/zh/Library/Android/sdk/platform-tools
 
 Yarn version: 
   1.5.1

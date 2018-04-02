@@ -12,7 +12,7 @@
 - [React学习资源汇总](https://github.com/tsrot/study-notes/blob/master/React%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB.md)
 - [react-boilerplate](https://github.com/mxstbr/react-boilerplate/tree/master/docs)
 - [React 测试入门教程](http://www.ruanyifeng.com/blog/2016/02/react-testing-tutorial.html)
-
+- [React 生态/学习资料](http://cn.redux.js.org/docs/introduction/Ecosystem.html)
 # 架子库
 - [create-react-app](https://github.com/facebookincubator/create-react-app)
 

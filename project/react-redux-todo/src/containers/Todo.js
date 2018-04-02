@@ -9,22 +9,22 @@ import Footer from '../components/Footer'
 class Todo extends Component {
   render() {
     // Injected by connect() call:
-    const {dispatch, visibleTodos, visibilityFilter} = this.props
+    const {dispatch, visibleTodos, visibilityFilter, onAddClickHandle, onTodoClickHandle, onFilterChangeHandle} = this.props
     return (
       <div>
         <AddTodo
           onAddClick={text =>
-            dispatch(addTodo(text))
+            onAddClickHandle(text)
           } />
         <TodoList
           todos={visibleTodos}
           onTodoClick={index =>
-            dispatch(toggleTodo(index))
+            onTodoClickHandle(index)
           } />
         <Footer
           filter={visibilityFilter}
-          onFilterChange={nextFilter =>
-            dispatch(setVisibilityFilter(nextFilter))
+          onFilterChange={nextFilter => 
+            onFilterChangeHandle(nextFilter)
           } />
       </div>
     )
@@ -65,5 +65,19 @@ function select(state) {
   }
 }
 
+function mapDispatchToProps(dispatch) {
+  return {
+    onAddClickHandle: (...args) => {
+      dispatch(addTodo(...args))
+    },
+    onTodoClickHandle: (...args) => {
+      dispatch(toggleTodo(...args))
+    },
+    onFilterChangeHandle: (...args) => {
+      dispatch(setVisibilityFilter(...args))
+    }
+  }
+}
+
 // 包装 component ，注入 dispatch 和 state 到其默认的 connect(select)(App) 中；
-export default connect(select)(Todo)
+export default connect(select, mapDispatchToProps)(Todo)
