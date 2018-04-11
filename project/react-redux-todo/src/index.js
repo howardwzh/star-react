@@ -11,11 +11,12 @@ import Home from './containers/Home'
 import configureStore from './store/configureStore'
 import sagas from './sagas/index'
 
-let store = configureStore({})
+const store = configureStore({})
 
 store.runSage(sagas)
 
-let rootElement = document.getElementById('root')
+const rootElement = document.getElementById('root')
+
 render(
   <Provider store={store}>
     <Router history={hashHistory}>

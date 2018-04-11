@@ -4,7 +4,7 @@ import * as actions from '../actions'
 function someFetchFn() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(true)
+      resolve({name: 'howard'})
       console.log('ok')
     }, 1000)
   })
@@ -16,7 +16,7 @@ function* getSomething(action) {
   })
   yield put({
     type: actions.FETCH_SUCCESS,
-    id: action.id
+    name: some.name
   })
 }
 
