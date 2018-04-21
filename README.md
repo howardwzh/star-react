@@ -5,13 +5,13 @@
 
 # 参考资料
 - [中文文档](http://www.css88.com/react/docs/hello-world.html)
-- [【译】展望2016，React.js 最佳实践 (中英对照版)](https://blog.jimmylv.info/2016-01-22-React.js-Best-Practices-for-2016/)
 - [【译】Redux + React 应用程序架构的 3 条规范（内附实例）](https://blog.jimmylv.info/2016-07-04-rules-for-structuring-redux-applications/)
 - [從零開始學 ReactJS](https://github.com/carlleton/reactjs101/tree/zh-CN)
 - [React学习资源汇总](https://github.com/tsrot/study-notes/blob/master/React%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB.md)
 - [react-boilerplate](https://github.com/mxstbr/react-boilerplate/tree/master/docs)
 - [React 测试入门教程](http://www.ruanyifeng.com/blog/2016/02/react-testing-tutorial.html)
 - [React 生态/学习资料](http://cn.redux.js.org/docs/introduction/Ecosystem.html)
+- [Redux 莞式教程](https://github.com/kenberkeley/redux-simple-tutorial)
 # 架子库
 - [create-react-app](https://github.com/facebookincubator/create-react-app)
 

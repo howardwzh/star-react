@@ -10,7 +10,6 @@ export default function configureStore(initState) {
     sagaMiddleware,
     createLogger()
   ))
- 
   store.runSage = sagaMiddleware.run
   store.close = () => store.dispatch(END)
   return store

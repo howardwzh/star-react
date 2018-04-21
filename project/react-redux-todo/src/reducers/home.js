@@ -1,6 +1,6 @@
 import {FETCH_SUCCESS, CHANGE_VALUE} from '../actions'
 
-export default function home(state = {}, action) {
+export default function home(state = {res: ''}, action) {
   switch (action.type) {
     case FETCH_SUCCESS:
       return {...state, res: action.name}
