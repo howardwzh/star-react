@@ -4,6 +4,14 @@
         "es2015"
     ],
     "plugins": [
-        "transform-object-rest-spread"
+        "transform-object-rest-spread",
+        [
+            "import",
+            {
+                "libraryName": "antd",
+                "libraryDirectory": "es",
+                "style": "css"
+            }
+        ]
     ]
 }

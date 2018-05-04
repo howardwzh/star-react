@@ -51,6 +51,14 @@ module.exports = {
         exclude: /bundle\..+\.js$/
       },
       {
+        test: /\.less$|\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'less-loader'
+        ]
+      },
+      {
         test: /\.html$/,
         use: [
           {

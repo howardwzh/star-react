@@ -1,42 +1,52 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
-import {connect} from 'react-redux'
-import {onLogin, onChangeName} from '../actions'
+import {Form, Icon, Input, Button, Checkbox} from 'antd'
+import './Login.less'
+const FormItem = Form.Item
 
-class Login extends Component {
-  componentDidMount() {
-  }
+class NormalLoginForm extends Component {
   render() {
-    const {onLogin, name, tip} = this.props
+    const {getFieldDecorator} = this.props.form;
     return (
-      <div>
-        Login
-        <div>{name}</div>
-        <input value={name} onChange={this.onChangeHandle.bind(this)} />
-        <p>{tip}</p>
-        <button onClick={() => onLogin('bb')}>fetch now</button>
-      </div>
-    )
+      <Form onSubmit={this.handleSubmit} className="login-form">
+        <h3>账户系统</h3>
+        <FormItem>
+          {getFieldDecorator('userName', {
+            rules: [{required: true, message: 'Please input your username!'}]
+          })(
+            <Input prefix={<Icon type="user" style={{color: 'rgba(0,0,0,.25)'}} />} placeholder="Username" />
+          )}
+        </FormItem>
+        <FormItem>
+          {getFieldDecorator('password', {
+            rules: [{required: true, message: 'Please input your Password!'}]
+          })(
+            <Input prefix={<Icon type="lock" style={{color: 'rgba(0,0,0,.25)'}} />} type="password" placeholder="Password" />
+          )}
+        </FormItem>
+        <FormItem>
+          {getFieldDecorator('remember', {
+            valuePropName: 'checked',
+            initialValue: true
+          })(
+            <Checkbox>Remember me</Checkbox>
+          )}
+          <a className="login-form-forgot" href="">Forgot password</a>
+          <Button type="primary" htmlType="submit" className="login-form-button">
+            Log in
+          </Button>
+          Or <a href="">register now!</a>
+        </FormItem>
+      </Form>
+    );
   }
-
-  onChangeHandle(e) {
-    const {onChangeName} = this.props
-    onChangeName(e.target.value)
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.form.validateFields((err, values) => {
+      if (!err) {
+        console.log('Received values of form: ', values);
+      }
+    });
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    name: state.auth.name,
-    tip: state.auth.tip
-  }
-}
-const mapDispatchToProps = {
-  onLogin,
-  onChangeName
-}
-
-// 包装 component ，注入 dispatch 和 state 到其默认的 connect(select)(App) 中；
-export default connect(mapStateToProps, mapDispatchToProps)(Login)
-
-
+export default Form.create()(NormalLoginForm)
