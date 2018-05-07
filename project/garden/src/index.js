@@ -21,9 +21,9 @@ render(
       <Route path='/' component={App}>
         <IndexRoute component={Home}></IndexRoute>
         <Route path='todo' component={Todo}></Route>
-      </Route>
-      <Route path='/auth' component={App}>
-        <IndexRoute component={Login}></IndexRoute>
+        <Route path='auth' component={App}>
+          <IndexRoute component={Login}></IndexRoute>
+        </Route>
       </Route>
     </Router>
   </Provider>,

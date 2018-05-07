@@ -4,10 +4,23 @@ import './Login.less'
 const FormItem = Form.Item
 
 class NormalLoginForm extends Component {
+  constructor(props) {
+    super(props)
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.form.validateFields((err, values) => {
+      if (!err) {
+        console.log('Received values of form: ', values);
+        window.location.href = './#/'
+      }
+    });
+  }
   render() {
     const {getFieldDecorator} = this.props.form;
     return (
-      <Form onSubmit={this.handleSubmit} className="login-form">
+      <Form className="login-form">
         <h3>账户系统</h3>
         <FormItem>
           {getFieldDecorator('userName', {
@@ -31,21 +44,13 @@ class NormalLoginForm extends Component {
             <Checkbox>Remember me</Checkbox>
           )}
           <a className="login-form-forgot" href="">Forgot password</a>
-          <Button type="primary" htmlType="submit" className="login-form-button">
+          <Button type="primary" onClick={this.handleSubmit} htmlType="submit" className="login-form-button">
             Log in
           </Button>
           Or <a href="">register now!</a>
         </FormItem>
       </Form>
     );
-  }
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.form.validateFields((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values);
-      }
-    });
   }
 }
 
