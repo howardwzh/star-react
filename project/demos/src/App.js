@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 
 import Props from './components/Props'
+import SKInput from './components/SKInput'
+import FSKInput from './components/FSKInput'
 
 class App extends Component {
   render () {
@@ -18,6 +20,9 @@ class App extends Component {
         <hr />
         <Props title="I am props" />
         <hr />
+        <SKInput />
+        <hr />
+        <FSKInput />
       </div>
     );
   }
