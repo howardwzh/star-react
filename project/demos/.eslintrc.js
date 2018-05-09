@@ -1,0 +1,156 @@
+module.exports = {
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb"
+  ],
+  /**
+   *  "off" 或 0 - 关闭规则
+   *  "warn" 或 1 - 开启规则，使用警告级别的错误：warn (不会导致程序退出),
+   *  "error" 或 2 - 开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)
+   */
+  "rules": {
+    // "no-unused-vars": [0],
+    "import/no-extraneous-dependencies": [
+      0
+    ],
+    /** 强制一行的最大长度 */
+    "max-len": [
+      1,
+      300,
+      2,
+      {
+        "ignoreComments": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    /** 要求或禁止使用分号而不是ASI */
+    "semi": [
+      0,
+      "always"
+    ],
+    /** 换行风格：unix（默认），windows */
+    "linebreak-style": [
+      0
+    ],
+    /** 强制在 function的左括号之前使用一致的空格 */
+    "space-before-function-paren": [
+      2,
+      "always"
+    ],
+    /** 禁止标识符中有悬空下划线_bar */
+    "no-underscore-dangle": [
+      0
+    ],
+    /** 不允许对 function 的参数进行重新赋值 */
+    "no-param-reassign": [
+      0
+    ],
+    /** 禁止使用一元操作符 ++ 和 -- */
+    "no-plusplus": [
+      0
+    ],
+    /** 禁用 console */
+    "no-console": [
+      0
+    ],
+    /** 禁止使用行尾空白 */
+    "no-trailing-spaces": [
+      0
+    ],
+    /** 数组或对象最后一个元素需要逗号 */
+    "comma-dangle": [
+      1,
+      "never"
+    ],
+    /** 强制在parseInt()使用基数参数 */
+    "radix": [
+      0
+    ],
+    /** if判断后执行内容只有一行时，不需要加花括号 */
+    "brace-style": [
+      0
+    ],
+    /** 要求 require() 出现在顶层模块作用域中 */
+    "global-require": [
+      0
+    ],
+    /** 不允许在变量定义之前使用它们 */
+    "no-use-before-define": [
+      0
+    ],
+    /** class里面的方法必须使用this */
+    "class-methods-use-this": [
+      0
+    ],
+    /** import时需要文件后缀 */
+    "import/extensions": [
+      0
+    ],
+    /** import需要写在最前面 */
+    "import/first": [
+      0
+    ],
+    /** 这是一个bug，需要禁用，采用下面的写法 */
+    "jsx-a11y/href-no-hash": [
+      0
+    ],
+    /** 链接锚点可用的检测 */
+    "jsx-a11y/anchor-is-valid": [
+      1,
+      {
+        "aspects": [
+          "invalidHref"
+        ]
+      }
+    ],
+    /** 静态html标签（如：span、a）禁止绑定事件监听 */
+    "jsx-a11y/no-static-element-interactions": [
+      0
+    ],
+    /** 非交互型dom（如：img）不允许加上事件监听 */
+    "jsx-a11y/no-noninteractive-element-interactions": [
+      0
+    ],
+    /** jsx中不能有bind */
+    "react/jsx-no-bind": [
+      0
+    ],
+    /** 禁用不安全属性（如：dangerouslySetInnerHTML） */
+    "react/no-danger": [
+      0
+    ],
+    /** 只有render的组件使用纯函数形式 */
+    "react/prefer-stateless-function": [
+      0
+    ],
+    /** 文本中的特殊字符必须转义（如：") */
+    "react/no-unescaped-entities": [
+      0
+    ],
+    /** 禁用指定的proptypes */
+    "react/forbid-prop-types": [
+      0
+    ],
+    /** 属性为true不用写true */
+    "react/jsx-boolean-value": [
+      0
+    ],
+    /** 组件内容的顺序 */
+    "react/sort-comp": [
+      1,
+      {
+        "order": [
+          "static-methods",
+          "lifecycle",
+          "everything-else",
+          "render"
+        ]
+      }
+    ]
+  },
+  /** 声明全局变量，避免检测变量未定义错误 */
+  "globals": {
+  },
+  "settings": {
+  }
+}
