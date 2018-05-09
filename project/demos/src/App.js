@@ -5,7 +5,7 @@ import './App.css';
 import Props from './components/Props'
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <div className="App">
         <header className="App-header">

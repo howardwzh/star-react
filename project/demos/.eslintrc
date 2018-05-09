@@ -1,4 +1,4 @@
-module.exports = {
+{
   "parser": "babel-eslint",
   "extends": [
     "airbnb"
@@ -9,7 +9,6 @@ module.exports = {
    *  "error" 或 2 - 开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)
    */
   "rules": {
-    // "no-unused-vars": [0],
     "import/no-extraneous-dependencies": [
       0
     ],
@@ -90,6 +89,8 @@ module.exports = {
     "import/first": [
       0
     ],
+    /** require中不能使用变量，移除限制 */
+    "import/no-dynamic-require": [0],
     /** 这是一个bug，需要禁用，采用下面的写法 */
     "jsx-a11y/href-no-hash": [
       0
@@ -146,11 +147,19 @@ module.exports = {
           "render"
         ]
       }
-    ]
+    ],
+    /** 文件必须使用jsx后缀，移除此限制 */
+    "react/jsx-filename-extension": [0],
+    /** 不能使用匿名函数，移除限制 */
+    "func-names": [0]
   },
   /** 声明全局变量，避免检测变量未定义错误 */
   "globals": {
-  },
-  "settings": {
+    "window": true,
+    "navigator": true,
+    "URL": true,
+    "fetch": true,
+    "document": true,
+    "it": true
   }
 }

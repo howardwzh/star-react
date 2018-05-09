@@ -6,8 +6,12 @@ class Props extends Component {
     title: PropTypes.string
   }
 
-  render() {
-    const {title} = this.props
+  static defaultProps = {
+    title: ''
+  }
+
+  render () {
+    const { title } = this.props
     return (
       <div className="props">
         {title}
