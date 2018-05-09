@@ -2,13 +2,10 @@
 
 import {fork, all} from 'redux-saga/effects'
 
-
-import * as home from './home'
 import * as auth from './auth'
 
 // 在这里添加自启动后发起的saga
 const reduxSagas = [
-  home,
   auth
 ]
 

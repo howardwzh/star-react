@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
-import {addTodo, toggleTodo, setVisibilityFilter, VisibilityFilters} from '../actions'
-import AddTodo from '../components/AddTodo'
-import TodoList from '../components/TodoList'
-import Footer from '../components/Footer'
+import {addTodo, toggleTodo, setVisibilityFilter, VisibilityFilters} from '../../actions'
+import AddTodo from '../../components/AddTodo'
+import TodoList from '../../components/TodoList'
+import Footer from '../../components/Footer'
 
 class Todo extends Component {
   render() {

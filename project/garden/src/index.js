@@ -4,9 +4,10 @@ import {Provider} from 'react-redux'
 import {Router, Route, hashHistory, IndexRoute} from 'react-router'
 
 import App from './App'
-import Todo from './containers/Todo'
-import Home from './containers/Home'
-import Login from './containers/Login'
+import Panel from './containers/panel/Panel'
+import Todo from './containers/panel/Todo'
+import Auth from './containers/auth/Auth'
+import Login from './containers/auth/Login'
 import configureStore from './store/configureStore'
 import sagas from './sagas/index'
 
@@ -19,9 +20,11 @@ render(
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path='/' component={App}>
-        <IndexRoute component={Home}></IndexRoute>
-        <Route path='todo' component={Todo}></Route>
-        <Route path='auth' component={App}>
+        <Route path='panel' component={Panel}>
+          <IndexRoute component={Todo}></IndexRoute>
+          <Route path='todo2' component={Todo}></Route>
+        </Route>
+        <Route path='auth' component={Auth}>
           <IndexRoute component={Login}></IndexRoute>
         </Route>
       </Route>
