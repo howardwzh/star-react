@@ -12,6 +12,7 @@
     "import/no-extraneous-dependencies": [
       0
     ],
+    "import/prefer-default-export": [0],
     /** 强制一行的最大长度 */
     "max-len": [
       1,
