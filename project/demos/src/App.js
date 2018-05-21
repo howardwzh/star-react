@@ -3,8 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 
 import Props from './components/Props'
-import SKInput from './components/SKInput'
-import FSKInput from './components/FSKInput'
+import State from './components/State'
+import EnhanceExample from './components/EnhanceExample'
+
+// redux + rematch
+import { Provider } from 'react-redux'
+import store from './store'
+import RematchCount from './components/RematchCount'
 
 class App extends Component {
   render () {
@@ -20,9 +25,13 @@ class App extends Component {
         <hr />
         <Props title="I am props" />
         <hr />
-        <SKInput />
+        <State />
         <hr />
-        <FSKInput />
+        <EnhanceExample />
+        <hr />
+        <Provider store={store}>
+          <RematchCount />
+        </Provider>
       </div>
     );
   }
