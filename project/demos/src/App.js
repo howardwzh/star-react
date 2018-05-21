@@ -11,6 +11,11 @@ import { Provider } from 'react-redux'
 import store from './store'
 import RematchCount from './components/RematchCount'
 
+// mobx
+import { Provider as MobxProvider } from 'mobx-react'
+import MobxStore from './store/mobx'
+import MobxCount from './components/MobxCount'
+
 class App extends Component {
   render () {
     return (
@@ -32,6 +37,10 @@ class App extends Component {
         <Provider store={store}>
           <RematchCount />
         </Provider>
+        <hr />
+        <MobxProvider store={MobxStore}>
+          <MobxCount />
+        </MobxProvider>
       </div>
     );
   }
