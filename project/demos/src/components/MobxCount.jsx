@@ -10,11 +10,15 @@ class MobxCount extends Component {
     store: null
   }
   render () {
-    const { count, increment } = this.props.store
+    const {
+      count, increment, Total, fetchSomeThing 
+    } = this.props.store
     return (
       <div>
         <button onClick={() => increment(3)}>加3</button>
+        <button onClick={() => fetchSomeThing()}>异步请求数值</button>
         <p>{count}</p>
+        <p>{Total}</p>
       </div>
     )
   }

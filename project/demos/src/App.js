@@ -8,7 +8,7 @@ import EnhanceExample from './components/EnhanceExample'
 
 // redux + rematch
 import { Provider } from 'react-redux'
-import store from './store'
+import store from './store/models'
 import RematchCount from './components/RematchCount'
 
 // mobx
