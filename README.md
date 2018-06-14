@@ -14,6 +14,7 @@
 - [Redux 莞式教程](https://github.com/kenberkeley/redux-simple-tutorial)
 # 架子库
 - [create-react-app](https://github.com/facebookincubator/create-react-app)
+- [react-cool-starter](https://github.com/wellyshen/react-cool-starter)
 
 # 开始旅程
 
