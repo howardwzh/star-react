@@ -16,6 +16,9 @@ import { Provider as MobxProvider } from 'mobx-react'
 import MobxStore from './store/mobx'
 import MobxCount from './components/MobxCount'
 
+// webp
+import Webp from './components/webp/Webp'
+
 class App extends Component {
   render () {
     return (
@@ -41,6 +44,8 @@ class App extends Component {
         <MobxProvider store={MobxStore}>
           <MobxCount />
         </MobxProvider>
+        <hr />
+        <Webp />
       </div>
     );
   }
