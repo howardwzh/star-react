@@ -1,5 +1,8 @@
 {
   "parser": "babel-eslint",
+  "env": {
+    "jest": true
+  },
   "extends": [
     "airbnb"
   ],
@@ -160,7 +163,6 @@
     "navigator": true,
     "URL": true,
     "fetch": true,
-    "document": true,
-    "it": true
+    "document": true
   }
 }
